@@ -1,0 +1,4 @@
+<div id="side-buttons">
+	<%= button_to "Checkout", new_order_url, :method=> :get, :remote => true, :id => 'button_id', :disabled => true %>
+	<%= button_to 'Empty cart', cart_path(:id => @cart.id), :method => :delete, data: { confirm: 'Are you sure?' }, :remote => true, :disabled => true %>
+</div>

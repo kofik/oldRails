@@ -1,0 +1,10 @@
+json.(@product, :title, :description, :price, :updated_at)
+json.edit_url edit_product_url(@product)
+
+json.orders @product.orders do |json, order|
+ json.(order, :name, :address, :email, :pay_type)
+end  
+
+json,line_items @product.line_items do |json, Line_items|
+json.(line_item, :quantity, :price)
+end

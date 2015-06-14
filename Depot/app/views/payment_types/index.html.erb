@@ -1,0 +1,37 @@
+<div id="payment_list">
+
+<h1>Listing payment types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_types.each do |payment_type| %>
+	      <tr class="<%= cycle('line_odd', 'line_even') %>">
+	      	<td class= "list_description2">
+		      	<dl>
+		        	<dt><%= payment_type.name %></dt>
+		        </dl>
+		    </td>    
+		     <td class="list_actions2">
+			     <%= link_to 'Show', payment_type %></br>
+			     <%= link_to 'Edit', edit_payment_type_path(payment_type) %></br>
+			     <%= link_to 'Destroy', payment_type, method: :delete, data: { confirm: 'Are you sure?' } %>
+			 </td>    
+	      </tr>  
+    <% end %>
+  </tbody>
+  <tr id="link">
+  	 <td>
+    	<%= link_to 'New Payment type', new_payment_type_path %>
+     </td>	
+   </tr> 	
+</table>
+
+</div>

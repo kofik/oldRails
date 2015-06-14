@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+one:
+  title: The Rails 4 Way (3rd Edition)
+  description: The “Bible” for Rails Development. Now Fully Updated for Rails 4.1
+  image_url: rails4way.jpeg
+  price: 31.78
+
+ruby:
+  title: Programming Ruby 1.9
+  description: Ruby is the fastest growing and most exciting dynamic language out there.  If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+  price: 49.50
+  image_url: ruby.png 
+#END:ruby

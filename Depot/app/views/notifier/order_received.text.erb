@@ -1,0 +1,11 @@
+Dear <%= @order.name %>
+
+Thank you for your recent order from The Pragmatic Store.
+
+You ordered the following items:
+
+<% for item in @order.line_items %>
+	<%= render(:controller => 'line_item', :partial => 'line_items/line_items', :locals => {:line_item => item} ) %>
+<% end %>
+
+We'll send you a separate e-mail when your order ships.

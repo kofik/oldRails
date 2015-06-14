@@ -1,0 +1,22 @@
+<!--
+<% unless @cart.line_items.empty? %>
+ -->
+	<table>
+		<% for item in @cart.line_items %>
+
+			<%= render(:controller => 'line_item', :partial => 'line_items/line_items', :locals => {:item => item} ) %>
+				
+		<% end %>
+		<tr class="total_line">
+			<td colspan="2">Total</td>
+			<td class="total_cell"><%= number_to_currency( @cart.total_price ) %></td>
+  		</tr>
+	</table>
+	<div id="side-buttons">
+		
+		<%= set_checkout %>
+		<%= set_empty_cart %>
+	</div>	
+<!--	
+<% end %>
+ -->

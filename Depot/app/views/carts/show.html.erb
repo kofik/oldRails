@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Your Pragmatic Cart</h2> 
+
+<ul> 
+	<%= render(:partial => "cart", :locals => {:@cart => @cart}) %>
+	
+</ul>
+
+<!-- <%= link_to 'Edit', edit_cart_path(@cart.id) %> -->
+<!-- <%= link_to 'Back', store_path(@cart)  %>  --> 
+
+<%= link_to 'Back', :controller => 'store', :action => 'index' %>

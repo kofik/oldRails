@@ -1,0 +1,43 @@
+# Logfile created on 2015-02-15 21:33:20 +0100 by logger.rb/44203
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Starting the New Relic agent in "development" environment.
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Reading configuration from config/newrelic.yml (/home/dubuntu/Downloads/rails/rails_and_react-feature-part_two)
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : New Relic Agent Developer Mode enabled.
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Environment: development
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : No known dispatcher detected.
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Application: Rails and React II (Development)
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Rails 3+ middleware instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing deferred Rack instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Rack::Builder middleware instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing ActiveRecord 4 instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Net instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Rails 4 view instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Rails 4 Controller instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Installing Rails 4 Error instrumentation
+[02/15/15 21:33:20 +0100 ubuntServ (7651)] INFO : Finished instrumentation
+[02/15/15 21:33:21 +0100 ubuntServ (7651)] INFO : Doing deferred dependency-detection before Rack startup
+[02/15/15 21:33:41 +0100 ubuntServ (7651)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/15/15 21:33:41 +0100 ubuntServ (7651)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/15/15 21:34:01 +0100 ubuntServ (7651)] INFO : Starting Agent shutdown
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Starting the New Relic agent in "development" environment.
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Reading configuration from config/newrelic.yml (/home/dubuntu/Downloads/rails/rails_and_react-feature-part_two)
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : New Relic Agent Developer Mode enabled.
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Environment: development
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : No known dispatcher detected.
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Application: Rails and React II (Development)
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Rails 3+ middleware instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing deferred Rack instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Rack::Builder middleware instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing ActiveRecord 4 instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Net instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Rails 4 view instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Rails 4 Controller instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Installing Rails 4 Error instrumentation
+[02/16/15 19:07:14 +0100 ubuntServ (6388)] INFO : Finished instrumentation
+[02/16/15 19:07:15 +0100 ubuntServ (6388)] INFO : Doing deferred dependency-detection before Rack startup
+[02/16/15 19:07:59 +0100 ubuntServ (6388)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/16/15 19:07:59 +0100 ubuntServ (6388)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/16/15 23:35:23 +0100 ubuntServ (6388)] INFO : Starting Agent shutdown

@@ -1,0 +1,22 @@
+
+<% if session[:current_item]  %>
+<%    @current_item = LineItem.find_by_id( session[:current_item] ) %>
+<% end %>
+
+<% if item == @current_item %>
+	<tr id="current_item">	
+<% else %>
+	<tr>
+<% end %>
+
+		<td><%= item.quantity %>&times;</td>
+		<td><%= item.product.title %></td>
+		<td class="item_price"><%= number_to_currency( item.total_price ) %></td>
+	
+		<td><%= link_to t('cart.del'), line_item_path(:id => item.id), 
+	          method: :delete, data: { confirm: t('cart.confirmation') }, :class => 'delete_book', :remote => true %></td>
+
+     	<td><%= link_to t('cart.min'), line_item_path(:id => item.id), method: :patch, :class => 'modify_book',:remote => true %></td>
+	     	     
+	</tr>
+	

@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Edwin Caro
+  address: 5125 Gallahag Dr Garland, Tx
+  email: edwincaro10@hotmail.com
+  payment_type_id: 1
+two:
+  name: Jeremy Caro
+  address: 7034 Gallahad Dr Garland, Tx
+  email: jeremycaro@hotmail.com
+  payment_type_id: 2

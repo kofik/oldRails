@@ -1,0 +1,16 @@
+/**
+ * @author Edwin Caro
+ */
+
+//#START_HIGHLIGHT
+$('#notice').hide();
+
+//#END_HIGHLIGHT
+
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+
+$('#cart').html("<%= j (render(@cart)) %>").slidedown( "slow" );
+
+$('#current_item').css({'background-color':'#88ff99'}).
+  animate({'background-color':'#114411'}, 100);
+  

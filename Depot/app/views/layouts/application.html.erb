@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Depot</title>
+	  <meta charset="UTF-8">
+
+	  <%= stylesheet_link_tag('depot', :media => :all) %>	  
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+<body id="store">
+  <div id="banner">
+		<%= image_tag("logo.png") %>
+		<%= @page_title || t('banner.title') %>
+
+		<%= form_tag({controller: "store", action: "index"}, method: :get, class: "locale") do %>
+			
+	  		<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),:onchange => 'this.form.submit()' %>
+			<%= submit_tag 'submit' %>
+			<%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+		<% end %>
+  </div>
+  <div id="columns">
+		<div id="side">
+			
+			<div id="cart"> 
+				<% if ! @cart.nil? %>	 
+				<%=  render @cart %>
+				<% end %>
+			</div>	
+
+			<%= link_to( t('menu.home') , {:controller => 'store'}, :class => 'action index') %><br />
+			<%= link_to( t('menu.fac') , {:controller => 'store'}, :class => 'action fac') %><br />
+			<%= link_to( t('menu.news') , {:controller => 'store'}, :class => 'action news') %><br />
+			<%= link_to( t('menu.contacts') , {:controller => 'store'}, :class => 'action contacts') %><br /> 
+			
+			<% if session[:user_id] %><br />
+				<%= link_to 'Orders', orders_path %><br />
+				<%= link_to 'Products', products_path %><br />
+				<%= link_to 'Users', users_path %><br />
+				<%= button_to 'Logout', logout_path, :method => :delete %><br />
+			<% end %>
+			
+		<p><%= Time.now %></p>   
+			
+    	</div>
+    	
+    	<div id="main">
+			<%= yield %>
+    	</div>
+  </div>
+</body>
+</html>

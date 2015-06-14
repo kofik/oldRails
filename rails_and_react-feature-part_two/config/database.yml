@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+
+development:
+  <<: *default
+  database: rails_and_react_development
+
+test:
+  <<: *default
+  database: rails_and_react_test
+
+production:
+  <<: *default
+  database: rails_and_react_production

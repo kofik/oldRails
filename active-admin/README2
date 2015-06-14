@@ -1,0 +1,53 @@
+
+bash
+
+bundle
+rails g active_admin:install
+rake db:migrate
+rails g active_admin:resource product
+
+Gemfile
+
+gem 'activeadmin'
+
+app/admin/products.rb
+
+ActiveAdmin.register Product do
+  scope :unreleased
+  
+  index do
+    column :name
+    column :category
+    column "Release Date", :released_at
+    column :price, :sortable => :price do |product|
+      div :class => "price" do
+        number_to_currency product.price
+      end
+    end
+    default_actions
+  end
+end
+
+app/admin/dashboards.rb
+
+ActiveAdmin::Dashboards.build do
+  section "Recent Products" do
+    table_for Product.order("released_at desc").limit(5) do
+      column :name do |product|
+        link_to product.name, [:admin, product]
+      end
+      column :released_at
+    end
+    strong { link_to "View All Products", admin_products_path }
+  end
+end
+
+app/assets/stylesheets/application.css.scss
+
+@import "products";
+
+config/initializers/active_admin.rb
+
+config.site_title = "Ryan's Store"
+
+

@@ -1,0 +1,2528 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'tiny-lr' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 warn package.json myapp@0.1.0 No description
+5 warn package.json myapp@0.1.0 No repository field.
+6 warn package.json myapp@0.1.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'tiny-lr', null ]
+9 verbose cache add name=undefined spec="tiny-lr" args=["tiny-lr",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'tiny-lr',
+10 verbose parsed url   path: 'tiny-lr',
+10 verbose parsed url   href: 'tiny-lr' }
+11 silly lockFile 6ad7e707-tiny-lr tiny-lr
+12 verbose lock tiny-lr /Users/edwincaro/.npm/6ad7e707-tiny-lr.lock
+13 silly lockFile 6ad7e707-tiny-lr tiny-lr
+14 silly lockFile 6ad7e707-tiny-lr tiny-lr
+15 verbose addNamed [ 'tiny-lr', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 9538b4ab-tiny-lr tiny-lr@
+18 verbose lock tiny-lr@ /Users/edwincaro/.npm/9538b4ab-tiny-lr.lock
+19 silly addNameRange { name: 'tiny-lr', range: '*', hasData: false }
+20 verbose url raw tiny-lr
+21 verbose url resolving [ 'https://registry.npmjs.org/', './tiny-lr' ]
+22 verbose url resolved https://registry.npmjs.org/tiny-lr
+23 info trying registry request attempt 1 at 11:02:58
+24 verbose etag "EWZIG9I5AG8KMTBDBZ26GSJJ8"
+25 http GET https://registry.npmjs.org/tiny-lr
+26 http 304 https://registry.npmjs.org/tiny-lr
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:28 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"EWZIG9I5AG8KMTBDBZ26GSJJ8"',
+27 silly registry.get     'x-served-by': 'cache-ord1735-ORD',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1410105388.088941,VS0,VE0',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag tiny-lr from cache
+29 silly addNameRange number 2 { name: 'tiny-lr', range: '*', hasData: true }
+30 silly addNameRange versions [ 'tiny-lr',
+30 silly addNameRange   [ '0.0.1',
+30 silly addNameRange     '0.0.2',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.0.5',
+30 silly addNameRange     '0.0.7',
+30 silly addNameRange     '0.0.8',
+30 silly addNameRange     '0.0.9',
+30 silly addNameRange     '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.1.3' ] ]
+31 verbose addNamed [ 'tiny-lr', '0.1.3' ]
+32 verbose addNamed [ '0.1.3', '0.1.3' ]
+33 silly lockFile ed3f8bad-tiny-lr-0-1-3 tiny-lr@0.1.3
+34 verbose lock tiny-lr@0.1.3 /Users/edwincaro/.npm/ed3f8bad-tiny-lr-0-1-3.lock
+35 silly lockFile ed3f8bad-tiny-lr-0-1-3 tiny-lr@0.1.3
+36 silly lockFile ed3f8bad-tiny-lr-0-1-3 tiny-lr@0.1.3
+37 silly lockFile 9538b4ab-tiny-lr tiny-lr@
+38 silly lockFile 9538b4ab-tiny-lr tiny-lr@
+39 silly resolved [ { author: { name: 'mklabs' },
+39 silly resolved     name: 'tiny-lr',
+39 silly resolved     description: 'Tiny LiveReload server, background-friendly',
+39 silly resolved     version: '0.1.3',
+39 silly resolved     homepage: 'https://github.com/mklabs/tiny-lr',
+39 silly resolved     bugs: { url: 'https://github.com/mklabs/tiny-lr/issues' },
+39 silly resolved     repository: { type: 'git', url: 'git://github.com/mklabs/tiny-lr.git' },
+39 silly resolved     bin: { 'tiny-lr': './bin/tiny-lr' },
+39 silly resolved     main: './lib',
+39 silly resolved     scripts:
+39 silly resolved      { 'prepublish:': 'npm test',
+39 silly resolved        test: 'mocha --reporter spec test/wd test',
+39 silly resolved        'test-debug': 'DEBUG=tinylr:* mocha --reporter list',
+39 silly resolved        'test-debug-all': 'DEBUG=* mocha --reporter list',
+39 silly resolved        pretest: 'npm run phantom-start',
+39 silly resolved        posttest: 'npm run phantom-stop',
+39 silly resolved        'phantom-start': 'sh scripts/phantom-start',
+39 silly resolved        'phantom-stop': 'sh scripts/phantom-stop',
+39 silly resolved        serve: 'node examples/express/server.js',
+39 silly resolved        'post-change': 'sh scripts/post-change',
+39 silly resolved        'get-change': 'curl http://localhost:35729/changed?files=site.css' },
+39 silly resolved     dependencies:
+39 silly resolved      { 'body-parser': '~1.8.0',
+39 silly resolved        debug: '~0.8.1',
+39 silly resolved        'faye-websocket': '~0.7.2',
+39 silly resolved        parseurl: '~1.3.0',
+39 silly resolved        qs: '~2.2.3' },
+39 silly resolved     devDependencies:
+39 silly resolved      { 'body-parser': '^1.0.2',
+39 silly resolved        connect: '^2.14.5',
+39 silly resolved        express: '^4.1.1',
+39 silly resolved        mocha: '^1.18.2',
+39 silly resolved        phantomjs: '^1.9.7-5',
+39 silly resolved        request: '^2.34.0',
+39 silly resolved        supertest: '^0.12.0',
+39 silly resolved        wd: '^0.2.21' },
+39 silly resolved     config: { test_port: '9001' },
+39 silly resolved     licenses: [ [Object] ],
+39 silly resolved     _id: 'tiny-lr@0.1.3',
+39 silly resolved     dist:
+39 silly resolved      { shasum: '4a1f3a63f88d510892838d2b3af3d6ebe33bed1c',
+39 silly resolved        tarball: 'http://registry.npmjs.org/tiny-lr/-/tiny-lr-0.1.3.tgz' },
+39 silly resolved     _from: 'tiny-lr@',
+39 silly resolved     _npmVersion: '1.3.10',
+39 silly resolved     _npmUser: { name: 'mklabs', email: 'daniel.mickael@gmail.com' },
+39 silly resolved     maintainers: [ [Object], [Object] ],
+39 silly resolved     directories: {},
+39 silly resolved     _shasum: '4a1f3a63f88d510892838d2b3af3d6ebe33bed1c',
+39 silly resolved     _resolved: 'https://registry.npmjs.org/tiny-lr/-/tiny-lr-0.1.3.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install tiny-lr@0.1.3 into /Users/edwincaro/Desktop/coffeescript
+41 info installOne tiny-lr@0.1.3
+42 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr unbuild
+43 verbose tar unpack /Users/edwincaro/.npm/tiny-lr/0.1.3/package.tgz
+44 silly lockFile c4b19e6d-offeescript-node-modules-tiny-lr tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+45 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr /Users/edwincaro/.npm/c4b19e6d-offeescript-node-modules-tiny-lr.lock
+46 silly lockFile 8933efb0-ro-npm-tiny-lr-0-1-3-package-tgz tar:///Users/edwincaro/.npm/tiny-lr/0.1.3/package.tgz
+47 verbose lock tar:///Users/edwincaro/.npm/tiny-lr/0.1.3/package.tgz /Users/edwincaro/.npm/8933efb0-ro-npm-tiny-lr-0-1-3-package-tgz.lock
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 silly gunzTarPerm extractEntry package.json
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm extractEntry .travis.yml
+52 silly gunzTarPerm extractEntry LICENSE-MIT
+53 silly gunzTarPerm extractEntry examples/express/package.json
+54 silly gunzTarPerm extractEntry examples/express/app.js
+55 silly gunzTarPerm extractEntry examples/express/server.js
+56 silly gunzTarPerm extractEntry examples/express/index.html
+57 silly gunzTarPerm extractEntry examples/express/styles/site.css
+58 silly gunzTarPerm extractEntry lib/client.js
+59 silly gunzTarPerm extractEntry lib/index.js
+60 silly gunzTarPerm extractEntry lib/server.js
+61 silly gunzTarPerm extractEntry lib/middleware/query.js
+62 silly gunzTarPerm extractEntry lib/public/livereload.js
+63 silly gunzTarPerm extractEntry readme.md
+64 silly gunzTarPerm extractEntry scripts/phantom-start
+65 silly gunzTarPerm extractEntry scripts/phantom-stop
+66 silly gunzTarPerm extractEntry scripts/post-change
+67 silly gunzTarPerm extractEntry test/client.js
+68 silly gunzTarPerm extractEntry test/middleware.js
+69 silly gunzTarPerm extractEntry test/server.js
+70 silly gunzTarPerm extractEntry test/helpers/listen.js
+71 silly gunzTarPerm extractEntry test/wd/index.js
+72 silly gunzTarPerm extractEntry tmp/.gitkeep
+73 silly lockFile c4b19e6d-offeescript-node-modules-tiny-lr tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+74 silly lockFile c4b19e6d-offeescript-node-modules-tiny-lr tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+75 silly lockFile 8933efb0-ro-npm-tiny-lr-0-1-3-package-tgz tar:///Users/edwincaro/.npm/tiny-lr/0.1.3/package.tgz
+76 silly lockFile 8933efb0-ro-npm-tiny-lr-0-1-3-package-tgz tar:///Users/edwincaro/.npm/tiny-lr/0.1.3/package.tgz
+77 info preinstall tiny-lr@0.1.3
+78 verbose readDependencies using package.json deps
+79 verbose readDependencies using package.json deps
+80 verbose cache add [ 'body-parser@~1.8.0', null ]
+81 verbose cache add name=undefined spec="body-parser@~1.8.0" args=["body-parser@~1.8.0",null]
+82 verbose parsed url { protocol: null,
+82 verbose parsed url   slashes: null,
+82 verbose parsed url   auth: null,
+82 verbose parsed url   host: null,
+82 verbose parsed url   port: null,
+82 verbose parsed url   hostname: null,
+82 verbose parsed url   hash: null,
+82 verbose parsed url   search: null,
+82 verbose parsed url   query: null,
+82 verbose parsed url   pathname: 'body-parser@~1.8.0',
+82 verbose parsed url   path: 'body-parser@~1.8.0',
+82 verbose parsed url   href: 'body-parser@~1.8.0' }
+83 verbose cache add [ 'debug@~0.8.1', null ]
+84 verbose cache add name=undefined spec="debug@~0.8.1" args=["debug@~0.8.1",null]
+85 verbose parsed url { protocol: null,
+85 verbose parsed url   slashes: null,
+85 verbose parsed url   auth: null,
+85 verbose parsed url   host: null,
+85 verbose parsed url   port: null,
+85 verbose parsed url   hostname: null,
+85 verbose parsed url   hash: null,
+85 verbose parsed url   search: null,
+85 verbose parsed url   query: null,
+85 verbose parsed url   pathname: 'debug@~0.8.1',
+85 verbose parsed url   path: 'debug@~0.8.1',
+85 verbose parsed url   href: 'debug@~0.8.1' }
+86 verbose cache add name="body-parser" spec="~1.8.0" args=["body-parser","~1.8.0"]
+87 verbose parsed url { protocol: null,
+87 verbose parsed url   slashes: null,
+87 verbose parsed url   auth: null,
+87 verbose parsed url   host: null,
+87 verbose parsed url   port: null,
+87 verbose parsed url   hostname: null,
+87 verbose parsed url   hash: null,
+87 verbose parsed url   search: null,
+87 verbose parsed url   query: null,
+87 verbose parsed url   pathname: '~1.8.0',
+87 verbose parsed url   path: '~1.8.0',
+87 verbose parsed url   href: '~1.8.0' }
+88 verbose addNamed [ 'body-parser', '~1.8.0' ]
+89 verbose addNamed [ null, '>=1.8.0-0 <1.9.0-0' ]
+90 silly lockFile b68cd600-body-parser-1-8-0 body-parser@~1.8.0
+91 verbose lock body-parser@~1.8.0 /Users/edwincaro/.npm/b68cd600-body-parser-1-8-0.lock
+92 verbose cache add name="debug" spec="~0.8.1" args=["debug","~0.8.1"]
+93 verbose parsed url { protocol: null,
+93 verbose parsed url   slashes: null,
+93 verbose parsed url   auth: null,
+93 verbose parsed url   host: null,
+93 verbose parsed url   port: null,
+93 verbose parsed url   hostname: null,
+93 verbose parsed url   hash: null,
+93 verbose parsed url   search: null,
+93 verbose parsed url   query: null,
+93 verbose parsed url   pathname: '~0.8.1',
+93 verbose parsed url   path: '~0.8.1',
+93 verbose parsed url   href: '~0.8.1' }
+94 verbose addNamed [ 'debug', '~0.8.1' ]
+95 verbose addNamed [ null, '>=0.8.1-0 <0.9.0-0' ]
+96 silly lockFile 79150105-debug-0-8-1 debug@~0.8.1
+97 verbose lock debug@~0.8.1 /Users/edwincaro/.npm/79150105-debug-0-8-1.lock
+98 verbose cache add [ 'faye-websocket@~0.7.2', null ]
+99 verbose cache add name=undefined spec="faye-websocket@~0.7.2" args=["faye-websocket@~0.7.2",null]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: 'faye-websocket@~0.7.2',
+100 verbose parsed url   path: 'faye-websocket@~0.7.2',
+100 verbose parsed url   href: 'faye-websocket@~0.7.2' }
+101 verbose cache add [ 'parseurl@~1.3.0', null ]
+102 verbose cache add name=undefined spec="parseurl@~1.3.0" args=["parseurl@~1.3.0",null]
+103 verbose parsed url { protocol: null,
+103 verbose parsed url   slashes: null,
+103 verbose parsed url   auth: null,
+103 verbose parsed url   host: null,
+103 verbose parsed url   port: null,
+103 verbose parsed url   hostname: null,
+103 verbose parsed url   hash: null,
+103 verbose parsed url   search: null,
+103 verbose parsed url   query: null,
+103 verbose parsed url   pathname: 'parseurl@~1.3.0',
+103 verbose parsed url   path: 'parseurl@~1.3.0',
+103 verbose parsed url   href: 'parseurl@~1.3.0' }
+104 verbose cache add [ 'qs@~2.2.3', null ]
+105 verbose cache add name=undefined spec="qs@~2.2.3" args=["qs@~2.2.3",null]
+106 verbose parsed url { protocol: null,
+106 verbose parsed url   slashes: null,
+106 verbose parsed url   auth: null,
+106 verbose parsed url   host: null,
+106 verbose parsed url   port: null,
+106 verbose parsed url   hostname: null,
+106 verbose parsed url   hash: null,
+106 verbose parsed url   search: null,
+106 verbose parsed url   query: null,
+106 verbose parsed url   pathname: 'qs@~2.2.3',
+106 verbose parsed url   path: 'qs@~2.2.3',
+106 verbose parsed url   href: 'qs@~2.2.3' }
+107 verbose cache add name="faye-websocket" spec="~0.7.2" args=["faye-websocket","~0.7.2"]
+108 verbose parsed url { protocol: null,
+108 verbose parsed url   slashes: null,
+108 verbose parsed url   auth: null,
+108 verbose parsed url   host: null,
+108 verbose parsed url   port: null,
+108 verbose parsed url   hostname: null,
+108 verbose parsed url   hash: null,
+108 verbose parsed url   search: null,
+108 verbose parsed url   query: null,
+108 verbose parsed url   pathname: '~0.7.2',
+108 verbose parsed url   path: '~0.7.2',
+108 verbose parsed url   href: '~0.7.2' }
+109 verbose addNamed [ 'faye-websocket', '~0.7.2' ]
+110 verbose addNamed [ null, '>=0.7.2-0 <0.8.0-0' ]
+111 silly lockFile d70c01fd-faye-websocket-0-7-2 faye-websocket@~0.7.2
+112 verbose lock faye-websocket@~0.7.2 /Users/edwincaro/.npm/d70c01fd-faye-websocket-0-7-2.lock
+113 verbose cache add name="parseurl" spec="~1.3.0" args=["parseurl","~1.3.0"]
+114 verbose parsed url { protocol: null,
+114 verbose parsed url   slashes: null,
+114 verbose parsed url   auth: null,
+114 verbose parsed url   host: null,
+114 verbose parsed url   port: null,
+114 verbose parsed url   hostname: null,
+114 verbose parsed url   hash: null,
+114 verbose parsed url   search: null,
+114 verbose parsed url   query: null,
+114 verbose parsed url   pathname: '~1.3.0',
+114 verbose parsed url   path: '~1.3.0',
+114 verbose parsed url   href: '~1.3.0' }
+115 verbose addNamed [ 'parseurl', '~1.3.0' ]
+116 verbose addNamed [ null, '>=1.3.0-0 <1.4.0-0' ]
+117 silly lockFile 24650040-parseurl-1-3-0 parseurl@~1.3.0
+118 verbose lock parseurl@~1.3.0 /Users/edwincaro/.npm/24650040-parseurl-1-3-0.lock
+119 verbose cache add name="qs" spec="~2.2.3" args=["qs","~2.2.3"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: '~2.2.3',
+120 verbose parsed url   path: '~2.2.3',
+120 verbose parsed url   href: '~2.2.3' }
+121 verbose addNamed [ 'qs', '~2.2.3' ]
+122 verbose addNamed [ null, '>=2.2.3-0 <2.3.0-0' ]
+123 silly lockFile 7358d2a6-qs-2-2-3 qs@~2.2.3
+124 verbose lock qs@~2.2.3 /Users/edwincaro/.npm/7358d2a6-qs-2-2-3.lock
+125 silly addNameRange { name: 'body-parser',
+125 silly addNameRange   range: '>=1.8.0-0 <1.9.0-0',
+125 silly addNameRange   hasData: false }
+126 silly addNameRange { name: 'debug', range: '>=0.8.1-0 <0.9.0-0', hasData: false }
+127 silly addNameRange { name: 'faye-websocket',
+127 silly addNameRange   range: '>=0.7.2-0 <0.8.0-0',
+127 silly addNameRange   hasData: false }
+128 silly addNameRange { name: 'parseurl', range: '>=1.3.0-0 <1.4.0-0', hasData: false }
+129 silly addNameRange { name: 'qs', range: '>=2.2.3-0 <2.3.0-0', hasData: false }
+130 verbose url raw body-parser
+131 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
+132 verbose url resolved https://registry.npmjs.org/body-parser
+133 info trying registry request attempt 1 at 11:02:59
+134 verbose etag "5MP7P0NEV1KLM4LD3KYMVLOYA"
+135 http GET https://registry.npmjs.org/body-parser
+136 verbose url raw debug
+137 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+138 verbose url resolved https://registry.npmjs.org/debug
+139 info trying registry request attempt 1 at 11:02:59
+140 verbose etag "7P86E3ZJXAQQV3IT0ZYXV4JD5"
+141 http GET https://registry.npmjs.org/debug
+142 verbose url raw parseurl
+143 verbose url resolving [ 'https://registry.npmjs.org/', './parseurl' ]
+144 verbose url resolved https://registry.npmjs.org/parseurl
+145 info trying registry request attempt 1 at 11:02:59
+146 verbose etag "4Y49U4KRMCNQLFWL2W9PFXES6"
+147 http GET https://registry.npmjs.org/parseurl
+148 verbose url raw faye-websocket
+149 verbose url resolving [ 'https://registry.npmjs.org/', './faye-websocket' ]
+150 verbose url resolved https://registry.npmjs.org/faye-websocket
+151 info trying registry request attempt 1 at 11:02:59
+152 verbose etag "AFWCJ3E6IEK4L5J5X2TD2DEDX"
+153 http GET https://registry.npmjs.org/faye-websocket
+154 verbose url raw qs
+155 verbose url resolving [ 'https://registry.npmjs.org/', './qs' ]
+156 verbose url resolved https://registry.npmjs.org/qs
+157 info trying registry request attempt 1 at 11:02:59
+158 verbose etag "768DBL3AQSPTZK185D2QIB63I"
+159 http GET https://registry.npmjs.org/qs
+160 http 304 https://registry.npmjs.org/body-parser
+161 silly registry.get cb [ 304,
+161 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+161 silly registry.get     server: 'Apache',
+161 silly registry.get     via: '1.1 varnish',
+161 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:28 GMT',
+161 silly registry.get     'cache-control': 'max-age=60',
+161 silly registry.get     etag: '"5MP7P0NEV1KLM4LD3KYMVLOYA"',
+161 silly registry.get     'x-served-by': 'cache-ord1731-ORD',
+161 silly registry.get     'x-cache': 'HIT',
+161 silly registry.get     'x-cache-hits': '1',
+161 silly registry.get     'x-timer': 'S1410105388.572782,VS0,VE0',
+161 silly registry.get     vary: 'Accept',
+161 silly registry.get     'content-length': '0',
+161 silly registry.get     'keep-alive': 'timeout=10, max=50',
+161 silly registry.get     connection: 'Keep-Alive' } ]
+162 verbose etag body-parser from cache
+163 http 304 https://registry.npmjs.org/parseurl
+164 silly registry.get cb [ 304,
+164 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+164 silly registry.get     server: 'Apache',
+164 silly registry.get     via: '1.1 varnish',
+164 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:13:43 GMT',
+164 silly registry.get     'cache-control': 'max-age=60',
+164 silly registry.get     etag: '"4Y49U4KRMCNQLFWL2W9PFXES6"',
+164 silly registry.get     'x-served-by': 'cache-ord1730-ORD',
+164 silly registry.get     'x-cache': 'HIT',
+164 silly registry.get     'x-cache-hits': '44',
+164 silly registry.get     'x-timer': 'S1410105388.578635,VS0,VE0',
+164 silly registry.get     vary: 'Accept',
+164 silly registry.get     'content-length': '0',
+164 silly registry.get     'keep-alive': 'timeout=10, max=50',
+164 silly registry.get     connection: 'Keep-Alive' } ]
+165 verbose etag parseurl from cache
+166 http 304 https://registry.npmjs.org/faye-websocket
+167 silly registry.get cb [ 304,
+167 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+167 silly registry.get     server: 'Apache',
+167 silly registry.get     via: '1.1 varnish',
+167 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:28 GMT',
+167 silly registry.get     'cache-control': 'max-age=60',
+167 silly registry.get     etag: '"AFWCJ3E6IEK4L5J5X2TD2DEDX"',
+167 silly registry.get     'x-served-by': 'cache-ord1723-ORD',
+167 silly registry.get     'x-cache': 'HIT',
+167 silly registry.get     'x-cache-hits': '1',
+167 silly registry.get     'x-timer': 'S1410105388.582123,VS0,VE0',
+167 silly registry.get     vary: 'Accept',
+167 silly registry.get     'content-length': '0',
+167 silly registry.get     'keep-alive': 'timeout=10, max=50',
+167 silly registry.get     connection: 'Keep-Alive' } ]
+168 verbose etag faye-websocket from cache
+169 http 304 https://registry.npmjs.org/qs
+170 silly registry.get cb [ 304,
+170 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+170 silly registry.get     server: 'Apache',
+170 silly registry.get     via: '1.1 varnish',
+170 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:55:49 GMT',
+170 silly registry.get     'cache-control': 'max-age=60',
+170 silly registry.get     etag: '"768DBL3AQSPTZK185D2QIB63I"',
+170 silly registry.get     'x-served-by': 'cache-ord1729-ORD',
+170 silly registry.get     'x-cache': 'HIT',
+170 silly registry.get     'x-cache-hits': '2',
+170 silly registry.get     'x-timer': 'S1410105388.584991,VS0,VE0',
+170 silly registry.get     vary: 'Accept',
+170 silly registry.get     'content-length': '0',
+170 silly registry.get     'keep-alive': 'timeout=10, max=50',
+170 silly registry.get     connection: 'Keep-Alive' } ]
+171 verbose etag qs from cache
+172 silly addNameRange number 2 { name: 'body-parser',
+172 silly addNameRange   range: '>=1.8.0-0 <1.9.0-0',
+172 silly addNameRange   hasData: true }
+173 silly addNameRange versions [ 'body-parser',
+173 silly addNameRange   [ '1.0.0',
+173 silly addNameRange     '1.0.1',
+173 silly addNameRange     '1.0.2',
+173 silly addNameRange     '1.1.0',
+173 silly addNameRange     '1.1.1',
+173 silly addNameRange     '1.1.2',
+173 silly addNameRange     '1.2.0',
+173 silly addNameRange     '1.2.1',
+173 silly addNameRange     '1.2.2',
+173 silly addNameRange     '1.3.0',
+173 silly addNameRange     '1.3.1',
+173 silly addNameRange     '1.4.0',
+173 silly addNameRange     '1.4.1',
+173 silly addNameRange     '1.4.2',
+173 silly addNameRange     '1.4.3',
+173 silly addNameRange     '1.5.0',
+173 silly addNameRange     '1.5.1',
+173 silly addNameRange     '1.5.2',
+173 silly addNameRange     '1.6.0',
+173 silly addNameRange     '1.6.1',
+173 silly addNameRange     '1.6.2',
+173 silly addNameRange     '1.6.3',
+173 silly addNameRange     '1.6.4',
+173 silly addNameRange     '1.6.5',
+173 silly addNameRange     '1.6.6',
+173 silly addNameRange     '1.6.7',
+173 silly addNameRange     '1.7.0',
+173 silly addNameRange     '1.8.0' ] ]
+174 verbose addNamed [ 'body-parser', '1.8.0' ]
+175 verbose addNamed [ '1.8.0', '1.8.0' ]
+176 silly lockFile 84b65efb-body-parser-1-8-0 body-parser@1.8.0
+177 verbose lock body-parser@1.8.0 /Users/edwincaro/.npm/84b65efb-body-parser-1-8-0.lock
+178 silly lockFile 84b65efb-body-parser-1-8-0 body-parser@1.8.0
+179 silly lockFile 84b65efb-body-parser-1-8-0 body-parser@1.8.0
+180 silly lockFile b68cd600-body-parser-1-8-0 body-parser@~1.8.0
+181 silly lockFile b68cd600-body-parser-1-8-0 body-parser@~1.8.0
+182 silly addNameRange number 2 { name: 'parseurl', range: '>=1.3.0-0 <1.4.0-0', hasData: true }
+183 silly addNameRange versions [ 'parseurl',
+183 silly addNameRange   [ '1.0.0',
+183 silly addNameRange     '1.0.1',
+183 silly addNameRange     '1.1.0',
+183 silly addNameRange     '1.1.1',
+183 silly addNameRange     '1.1.2',
+183 silly addNameRange     '1.1.3',
+183 silly addNameRange     '1.2.0',
+183 silly addNameRange     '1.3.0' ] ]
+184 verbose addNamed [ 'parseurl', '1.3.0' ]
+185 verbose addNamed [ '1.3.0', '1.3.0' ]
+186 silly lockFile 7b3b7804-parseurl-1-3-0 parseurl@1.3.0
+187 verbose lock parseurl@1.3.0 /Users/edwincaro/.npm/7b3b7804-parseurl-1-3-0.lock
+188 silly lockFile 7b3b7804-parseurl-1-3-0 parseurl@1.3.0
+189 silly lockFile 7b3b7804-parseurl-1-3-0 parseurl@1.3.0
+190 silly lockFile 24650040-parseurl-1-3-0 parseurl@~1.3.0
+191 silly lockFile 24650040-parseurl-1-3-0 parseurl@~1.3.0
+192 silly addNameRange number 2 { name: 'faye-websocket',
+192 silly addNameRange   range: '>=0.7.2-0 <0.8.0-0',
+192 silly addNameRange   hasData: true }
+193 silly addNameRange versions [ 'faye-websocket',
+193 silly addNameRange   [ '0.1.0',
+193 silly addNameRange     '0.1.1',
+193 silly addNameRange     '0.1.2',
+193 silly addNameRange     '0.2.0',
+193 silly addNameRange     '0.3.0',
+193 silly addNameRange     '0.3.1',
+193 silly addNameRange     '0.4.0',
+193 silly addNameRange     '0.4.1',
+193 silly addNameRange     '0.4.2',
+193 silly addNameRange     '0.4.3',
+193 silly addNameRange     '0.4.4',
+193 silly addNameRange     '0.5.0',
+193 silly addNameRange     '0.6.0',
+193 silly addNameRange     '0.6.1',
+193 silly addNameRange     '0.7.0',
+193 silly addNameRange     '0.7.1',
+193 silly addNameRange     '0.7.2' ] ]
+194 verbose addNamed [ 'faye-websocket', '0.7.2' ]
+195 verbose addNamed [ '0.7.2', '0.7.2' ]
+196 silly lockFile a4440247-faye-websocket-0-7-2 faye-websocket@0.7.2
+197 verbose lock faye-websocket@0.7.2 /Users/edwincaro/.npm/a4440247-faye-websocket-0-7-2.lock
+198 silly addNameRange number 2 { name: 'qs', range: '>=2.2.3-0 <2.3.0-0', hasData: true }
+199 silly addNameRange versions [ 'qs',
+199 silly addNameRange   [ '0.0.1',
+199 silly addNameRange     '0.0.2',
+199 silly addNameRange     '0.0.3',
+199 silly addNameRange     '0.0.4',
+199 silly addNameRange     '0.0.5',
+199 silly addNameRange     '0.0.6',
+199 silly addNameRange     '0.0.7',
+199 silly addNameRange     '0.1.0',
+199 silly addNameRange     '0.2.0',
+199 silly addNameRange     '0.3.0',
+199 silly addNameRange     '0.3.1',
+199 silly addNameRange     '0.3.2',
+199 silly addNameRange     '0.4.0',
+199 silly addNameRange     '0.4.1',
+199 silly addNameRange     '0.4.2',
+199 silly addNameRange     '0.5.0',
+199 silly addNameRange     '0.5.1',
+199 silly addNameRange     '0.5.2',
+199 silly addNameRange     '0.5.3',
+199 silly addNameRange     '0.5.4',
+199 silly addNameRange     '0.5.5',
+199 silly addNameRange     '0.5.6',
+199 silly addNameRange     '0.6.0',
+199 silly addNameRange     '0.6.1',
+199 silly addNameRange     '0.6.2',
+199 silly addNameRange     '0.6.3',
+199 silly addNameRange     '0.6.4',
+199 silly addNameRange     '0.6.5',
+199 silly addNameRange     '0.6.6',
+199 silly addNameRange     '1.0.0',
+199 silly addNameRange     '1.0.1',
+199 silly addNameRange     '1.0.2',
+199 silly addNameRange     '1.1.0',
+199 silly addNameRange     '1.2.0',
+199 silly addNameRange     '1.2.1',
+199 silly addNameRange     '1.2.2',
+199 silly addNameRange     '2.0.0',
+199 silly addNameRange     '2.1.0',
+199 silly addNameRange     '2.2.0',
+199 silly addNameRange     '2.2.1',
+199 silly addNameRange     '2.2.2',
+199 silly addNameRange     '2.2.3' ] ]
+200 verbose addNamed [ 'qs', '2.2.3' ]
+201 verbose addNamed [ '2.2.3', '2.2.3' ]
+202 silly lockFile 48bc3f2b-qs-2-2-3 qs@2.2.3
+203 verbose lock qs@2.2.3 /Users/edwincaro/.npm/48bc3f2b-qs-2-2-3.lock
+204 silly lockFile a4440247-faye-websocket-0-7-2 faye-websocket@0.7.2
+205 silly lockFile a4440247-faye-websocket-0-7-2 faye-websocket@0.7.2
+206 silly lockFile d70c01fd-faye-websocket-0-7-2 faye-websocket@~0.7.2
+207 silly lockFile d70c01fd-faye-websocket-0-7-2 faye-websocket@~0.7.2
+208 silly lockFile 48bc3f2b-qs-2-2-3 qs@2.2.3
+209 silly lockFile 48bc3f2b-qs-2-2-3 qs@2.2.3
+210 silly lockFile 7358d2a6-qs-2-2-3 qs@~2.2.3
+211 silly lockFile 7358d2a6-qs-2-2-3 qs@~2.2.3
+212 http 304 https://registry.npmjs.org/debug
+213 silly registry.get cb [ 304,
+213 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:28 GMT',
+213 silly registry.get     server: 'Apache',
+213 silly registry.get     via: '1.1 varnish',
+213 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:28 GMT',
+213 silly registry.get     'cache-control': 'max-age=60',
+213 silly registry.get     etag: '"7P86E3ZJXAQQV3IT0ZYXV4JD5"',
+213 silly registry.get     'x-served-by': 'cache-ord1735-ORD',
+213 silly registry.get     'x-cache': 'HIT',
+213 silly registry.get     'x-cache-hits': '1',
+213 silly registry.get     'x-timer': 'S1410105388.575920,VS0,VE85',
+213 silly registry.get     vary: 'Accept',
+213 silly registry.get     'content-length': '0',
+213 silly registry.get     'keep-alive': 'timeout=10, max=50',
+213 silly registry.get     connection: 'Keep-Alive' } ]
+214 verbose etag debug from cache
+215 silly addNameRange number 2 { name: 'debug', range: '>=0.8.1-0 <0.9.0-0', hasData: true }
+216 silly addNameRange versions [ 'debug',
+216 silly addNameRange   [ '0.0.1',
+216 silly addNameRange     '0.1.0',
+216 silly addNameRange     '0.2.0',
+216 silly addNameRange     '0.3.0',
+216 silly addNameRange     '0.4.0',
+216 silly addNameRange     '0.4.1',
+216 silly addNameRange     '0.5.0',
+216 silly addNameRange     '0.6.0',
+216 silly addNameRange     '0.7.0',
+216 silly addNameRange     '0.7.1',
+216 silly addNameRange     '0.7.2',
+216 silly addNameRange     '0.7.3',
+216 silly addNameRange     '0.7.4',
+216 silly addNameRange     '0.8.0',
+216 silly addNameRange     '0.8.1',
+216 silly addNameRange     '1.0.0',
+216 silly addNameRange     '1.0.1',
+216 silly addNameRange     '1.0.2',
+216 silly addNameRange     '1.0.3',
+216 silly addNameRange     '1.0.4',
+216 silly addNameRange     '2.0.0' ] ]
+217 verbose addNamed [ 'debug', '0.8.1' ]
+218 verbose addNamed [ '0.8.1', '0.8.1' ]
+219 silly lockFile a38530e1-debug-0-8-1 debug@0.8.1
+220 verbose lock debug@0.8.1 /Users/edwincaro/.npm/a38530e1-debug-0-8-1.lock
+221 silly lockFile a38530e1-debug-0-8-1 debug@0.8.1
+222 silly lockFile a38530e1-debug-0-8-1 debug@0.8.1
+223 silly lockFile 79150105-debug-0-8-1 debug@~0.8.1
+224 silly lockFile 79150105-debug-0-8-1 debug@~0.8.1
+225 silly resolved [ { name: 'body-parser',
+225 silly resolved     description: 'Node.js body parsing middleware',
+225 silly resolved     version: '1.8.0',
+225 silly resolved     contributors: [ [Object], [Object] ],
+225 silly resolved     license: 'MIT',
+225 silly resolved     repository: { type: 'git', url: 'https://github.com/expressjs/body-parser' },
+225 silly resolved     dependencies:
+225 silly resolved      { bytes: '1.0.0',
+225 silly resolved        depd: '0.4.4',
+225 silly resolved        'iconv-lite': '0.4.4',
+225 silly resolved        'media-typer': '0.2.0',
+225 silly resolved        'on-finished': '2.1.0',
+225 silly resolved        qs: '2.2.3',
+225 silly resolved        'raw-body': '1.3.0',
+225 silly resolved        'type-is': '~1.5.0' },
+225 silly resolved     devDependencies:
+225 silly resolved      { istanbul: '0.3.2',
+225 silly resolved        mocha: '~1.21.4',
+225 silly resolved        should: '~4.0.4',
+225 silly resolved        supertest: '~0.13.0' },
+225 silly resolved     files: [ 'lib/', 'LICENSE', 'HISTORY.md', 'index.js' ],
+225 silly resolved     engines: { node: '>= 0.8' },
+225 silly resolved     scripts:
+225 silly resolved      { test: 'mocha --require should --require test/support/env --reporter spec --check-leaks --bail test/',
+225 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/',
+225 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/' },
+225 silly resolved     gitHead: '17d73ae0ec6fc1f21f932849fa7103f37c67c718',
+225 silly resolved     bugs: { url: 'https://github.com/expressjs/body-parser/issues' },
+225 silly resolved     homepage: 'https://github.com/expressjs/body-parser',
+225 silly resolved     _id: 'body-parser@1.8.0',
+225 silly resolved     _shasum: '20b3a3d3553a6835d7373456dd9da8720759b306',
+225 silly resolved     _from: 'body-parser@~1.8.0',
+225 silly resolved     _npmVersion: '1.4.21',
+225 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+225 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+225 silly resolved     dist:
+225 silly resolved      { shasum: '20b3a3d3553a6835d7373456dd9da8720759b306',
+225 silly resolved        tarball: 'http://registry.npmjs.org/body-parser/-/body-parser-1.8.0.tgz' },
+225 silly resolved     directories: {},
+225 silly resolved     _resolved: 'https://registry.npmjs.org/body-parser/-/body-parser-1.8.0.tgz',
+225 silly resolved     readme: 'ERROR: No README data found!' },
+225 silly resolved   { name: 'parseurl',
+225 silly resolved     description: 'parse a url with memoization',
+225 silly resolved     version: '1.3.0',
+225 silly resolved     author:
+225 silly resolved      { name: 'Jonathan Ong',
+225 silly resolved        email: 'me@jongleberry.com',
+225 silly resolved        url: 'http://jongleberry.com' },
+225 silly resolved     contributors: [ [Object] ],
+225 silly resolved     repository: { type: 'git', url: 'https://github.com/expressjs/parseurl' },
+225 silly resolved     license: 'MIT',
+225 silly resolved     devDependencies:
+225 silly resolved      { benchmark: '1.0.0',
+225 silly resolved        'beautify-benchmark': '0.2.4',
+225 silly resolved        'fast-url-parser': '~1.0.0',
+225 silly resolved        istanbul: '0.3.0',
+225 silly resolved        mocha: '~1.21.4' },
+225 silly resolved     scripts:
+225 silly resolved      { bench: 'node benchmark/index.js',
+225 silly resolved        test: 'mocha --check-leaks --bail --reporter spec test/',
+225 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot test/',
+225 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec test/' },
+225 silly resolved     gitHead: '03b7ccca240e2bef5df6c25797e99175d28fb2cb',
+225 silly resolved     bugs: { url: 'https://github.com/expressjs/parseurl/issues' },
+225 silly resolved     homepage: 'https://github.com/expressjs/parseurl',
+225 silly resolved     _id: 'parseurl@1.3.0',
+225 silly resolved     _shasum: 'b58046db4223e145afa76009e61bac87cc2281b3',
+225 silly resolved     _from: 'parseurl@~1.3.0',
+225 silly resolved     _npmVersion: '1.4.21',
+225 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+225 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+225 silly resolved     dist:
+225 silly resolved      { shasum: 'b58046db4223e145afa76009e61bac87cc2281b3',
+225 silly resolved        tarball: 'http://registry.npmjs.org/parseurl/-/parseurl-1.3.0.tgz' },
+225 silly resolved     directories: {},
+225 silly resolved     _resolved: 'https://registry.npmjs.org/parseurl/-/parseurl-1.3.0.tgz',
+225 silly resolved     readme: 'ERROR: No README data found!' },
+225 silly resolved   { name: 'qs',
+225 silly resolved     version: '2.2.3',
+225 silly resolved     description: 'A querystring parser that supports nesting and arrays, with a depth limit',
+225 silly resolved     homepage: 'https://github.com/hapijs/qs',
+225 silly resolved     main: 'index.js',
+225 silly resolved     dependencies: {},
+225 silly resolved     devDependencies: { lab: '4.x.x' },
+225 silly resolved     scripts: { test: 'make test-cov' },
+225 silly resolved     repository: { type: 'git', url: 'https://github.com/hapijs/qs.git' },
+225 silly resolved     keywords: [ 'querystring', 'qs' ],
+225 silly resolved     author: { name: 'Nathan LaFreniere', email: 'quitlahok@gmail.com' },
+225 silly resolved     licenses: [ [Object] ],
+225 silly resolved     gitHead: '904528124a6eb879ebc5197376e9613069414f67',
+225 silly resolved     bugs: { url: 'https://github.com/hapijs/qs/issues' },
+225 silly resolved     _id: 'qs@2.2.3',
+225 silly resolved     _shasum: '6139c1f47960eff5655e56aab0ef9f6dd16d4eeb',
+225 silly resolved     _from: 'qs@~2.2.3',
+225 silly resolved     _npmVersion: '1.4.23',
+225 silly resolved     _npmUser: { name: 'nlf', email: 'quitlahok@gmail.com' },
+225 silly resolved     maintainers: [ [Object], [Object] ],
+225 silly resolved     dist:
+225 silly resolved      { shasum: '6139c1f47960eff5655e56aab0ef9f6dd16d4eeb',
+225 silly resolved        tarball: 'http://registry.npmjs.org/qs/-/qs-2.2.3.tgz' },
+225 silly resolved     directories: {},
+225 silly resolved     _resolved: 'https://registry.npmjs.org/qs/-/qs-2.2.3.tgz',
+225 silly resolved     readme: 'ERROR: No README data found!' },
+225 silly resolved   { name: 'faye-websocket',
+225 silly resolved     description: 'Standards-compliant WebSocket server and client',
+225 silly resolved     homepage: 'http://github.com/faye/faye-websocket-node',
+225 silly resolved     author:
+225 silly resolved      { name: 'James Coglan',
+225 silly resolved        email: 'jcoglan@gmail.com',
+225 silly resolved        url: 'http://jcoglan.com/' },
+225 silly resolved     keywords: [ 'websocket', 'eventsource' ],
+225 silly resolved     license: 'MIT',
+225 silly resolved     version: '0.7.2',
+225 silly resolved     engines: { node: '>=0.4.0' },
+225 silly resolved     main: './lib/faye/websocket',
+225 silly resolved     dependencies: { 'websocket-driver': '>=0.3.1' },
+225 silly resolved     devDependencies: { jstest: '', pace: '' },
+225 silly resolved     scripts: { test: 'jstest spec/runner.js' },
+225 silly resolved     repository:
+225 silly resolved      { type: 'git',
+225 silly resolved        url: 'git://github.com/faye/faye-websocket-node.git' },
+225 silly resolved     bugs: { url: 'http://github.com/faye/faye-websocket-node/issues' },
+225 silly resolved     readme: '# faye-websocket\n\n* Travis CI build: [![Build\n  status](https://secure.travis-ci.org/faye/faye-websocket-node.png)](http://travis-ci.org/faye/faye-websocket-node)\n* Autobahn tests: [server](http://faye.jcoglan.com/autobahn/servers/),\n  [client](http://faye.jcoglan.com/autobahn/clients/)\n\nThis is a general-purpose WebSocket implementation extracted from the\n[Faye](http://faye.jcoglan.com) project. It provides classes for easily\nbuilding WebSocket servers and clients in Node. It does not provide a server\nitself, but rather makes it easy to handle WebSocket connections within an\nexisting [Node](http://nodejs.org/) application. It does not provide any\nabstraction other than the standard [WebSocket\nAPI](http://dev.w3.org/html5/websockets/).\n\nIt also provides an abstraction for handling\n[EventSource](http://dev.w3.org/html5/eventsource/) connections, which are\none-way connections that allow the server to push data to the client. They are\nbased on streaming HTTP responses and can be easier to access via proxies than\nWebSockets.\n\n\n## Installation\n\n```\n$ npm install faye-websocket\n```\n\n\n## Handling WebSocket connections in Node\n\nYou can handle WebSockets on the server side by listening for HTTP Upgrade\nrequests, and creating a new socket for the request. This socket object exposes\nthe usual WebSocket methods for receiving and sending messages. For example this\nis how you\'d implement an echo server:\n\n```js\nvar WebSocket = require(\'faye-websocket\'),\n    http      = require(\'http\');\n\nvar server = http.createServer();\n\nserver.on(\'upgrade\', function(request, socket, body) {\n  if (WebSocket.isWebSocket(request)) {\n    var ws = new WebSocket(request, socket, body);\n    \n    ws.on(\'message\', function(event) {\n      ws.send(event.data);\n    });\n    \n    ws.on(\'close\', function(event) {\n      console.log(\'close\', event.code, event.reason);\n      ws = null;\n    });\n  }\n});\n\nserver.listen(8000);\n```\n\n`WebSocket` objects are also duplex streams, so you could replace the\n`ws.on(\'message\', ...)` line with:\n\n```js\n    ws.pipe(ws);\n```\n\nNote that under certain circumstances (notably a draft-76 client connecting\nthrough an HTTP proxy), the WebSocket handshake will not be complete after you\ncall `new WebSocket()` because the server will not have received the entire\nhandshake from the client yet. In this case, calls to `ws.send()` will buffer\nthe message in memory until the handshake is complete, at which point any\nbuffered messages will be sent to the client.\n\nIf you need to detect when the WebSocket handshake is complete, you can use the\n`onopen` event.\n\nIf the connection\'s protocol version supports it, you can call `ws.ping()` to\nsend a ping message and wait for the client\'s response. This method takes a\nmessage string, and an optional callback that fires when a matching pong\nmessage is received. It returns `true` iff a ping message was sent. If the\nclient does not support ping/pong, this method sends no data and returns\n`false`.\n\n```js\nws.ping(\'Mic check, one, two\', function() {\n  // fires when pong is received\n});\n```\n\n\n## Using the WebSocket client\n\nThe client supports both the plain-text `ws` protocol and the encrypted `wss`\nprotocol, and has exactly the same interface as a socket you would use in a web\nbrowser. On the wire it identifies itself as `hybi-13`.\n\n```js\nvar WebSocket = require(\'faye-websocket\'),\n    ws        = new WebSocket.Client(\'ws://www.example.com/\');\n\nws.on(\'open\', function(event) {\n  console.log(\'open\');\n  ws.send(\'Hello, world!\');\n});\n\nws.on(\'message\', function(event) {\n  console.log(\'message\', event.data);\n});\n\nws.on(\'close\', function(event) {\n  console.log(\'close\', event.code, event.reason);\n  ws = null;\n});\n```\n\nThe WebSocket client also lets you inspect the status and headers of the\nhandshake response via its `statusCode` and `headers` properties.\n\n\n## Subprotocol negotiation\n\nThe WebSocket protocol allows peers to select and identify the application\nprotocol to use over the connection. On the client side, you can set which\nprotocols the client accepts by passing a list of protocol names when you\nconstruct the socket:\n\n```js\nvar ws = new WebSocket.Client(\'ws://www.example.com/\', [\'irc\', \'amqp\']);\n```\n\nOn the server side, you can likewise pass in the list of protocols the server\nsupports after the other constructor arguments:\n\n```js\nvar ws = new WebSocket(request, socket, body, [\'irc\', \'amqp\']);\n```\n\nIf the client and server agree on a protocol, both the client- and server-side\nsocket objects expose the selected protocol through the `ws.protocol` property.\n\n\n## Initialization options\n\nBoth the server- and client-side classes allow an options object to be passed\nin at initialization time, for example:\n\n```js\nvar ws = new WebSocket(request, socket, body, protocols, options);\nvar ws = new WebSocket.Client(url, protocols, options);\n```\n\n`protocols` is an array of subprotocols as described above, or `null`.\n`options` is an optional object containing any of these fields:\n\n* `headers` - an object containing key-value pairs representing HTTP headers to\n  be sent during the handshake process\n* `maxLength` - the maximum allowed size of incoming message frames, in bytes.\n  The default value is `2^26 - 1`, or 1 byte short of 64 MiB.\n* `ping` - an integer that sets how often the WebSocket should send ping\n  frames, measured in seconds\n\n\n## WebSocket API\n\nBoth server- and client-side `WebSocket` objects support the following API.\n\n* <b>`on(\'open\', function(event) {})`</b> fires when the socket connection is\n  established. Event has no attributes.\n* <b>`on(\'message\', function(event) {})`</b> fires when the socket receives a\n  message. Event has one attribute, <b>`data`</b>, which is either a `String`\n  (for text frames) or a `Buffer` (for binary frames).\n* <b>`on(\'error\', function(event) {})`</b> fires when there is a protocol error\n  due to bad data sent by the other peer. This event is purely informational,\n  you do not need to implement error recover.\n* <b>`on(\'close\', function(event) {})`</b> fires when either the client or the\n  server closes the connection. Event has two optional attributes,\n  <b>`code`</b> and <b>`reason`</b>, that expose the status code and message\n  sent by the peer that closed the connection.\n* <b>`send(message)`</b> accepts either a `String` or a `Buffer` and sends a\n  text or binary message over the connection to the other peer.\n* <b>`ping(message = \'\', function() {})`</b> sends a ping frame with an\n  optional message and fires the callback when a matching pong is received.\n* <b>`close(code, reason)`</b> closes the connection, sending the given status\n  code and reason text, both of which are optional.\n* <b>`version`</b> is a string containing the version of the `WebSocket`\n  protocol the connection is using.\n* <b>`protocol`</b> is a string (which may be empty) identifying the\n  subprotocol the socket is using.\n\n\n## Handling EventSource connections in Node\n\nEventSource connections provide a very similar interface, although because they\nonly allow the server to send data to the client, there is no `onmessage` API.\nEventSource allows the server to push text messages to the client, where each\nmessage has an optional event-type and ID.\n\n```js\nvar WebSocket   = require(\'faye-websocket\'),\n    EventSource = WebSocket.EventSource,\n    http        = require(\'http\');\n\nvar server = http.createServer();\n\nserver.on(\'request\', function(request, response) {\n  if (EventSource.isEventSource(request)) {\n    var es = new EventSource(request, response);\n    console.log(\'open\', es.url, es.lastEventId);\n    \n    // Periodically send messages\n    var loop = setInterval(function() { es.send(\'Hello\') }, 1000);\n    \n    es.on(\'close\', function() {\n      clearInterval(loop);\n      es = null;\n    });\n  \n  } else {\n    // Normal HTTP request\n    response.writeHead(200, {\'Content-Type\': \'text/plain\'});\n    response.end(\'Hello\');\n  }\n});\n\nserver.listen(8000);\n```\n\nThe `send` method takes two optional parameters, `event` and `id`. The default\nevent-type is `\'message\'` with no ID. For example, to send a `notification`\nevent with ID `99`:\n\n```js\nes.send(\'Breaking News!\', {event: \'notification\', id: \'99\'});\n```\n\nThe `EventSource` object exposes the following properties:\n\n* <b>`url`</b> is a string containing the URL the client used to create the\n  EventSource.\n* <b>`lastEventId`</b> is a string containing the last event ID received by the\n  client. You can use this when the client reconnects after a dropped\n  connection to determine which messages need resending.\n\nWhen you initialize an EventSource with ` new EventSource()`, you can pass\nconfiguration options after the `response` parameter. Available options are:\n\n* <b>`headers`</b> is an object containing custom headers to be set on the\n  EventSource response.\n* <b>`retry`</b> is a number that tells the client how long (in seconds) it\n  should wait after a dropped connection before attempting to reconnect.\n* <b>`ping`</b> is a number that tells the server how often (in seconds) to\n  send \'ping\' packets to the client to keep the connection open, to defeat\n  timeouts set by proxies. The client will ignore these messages.\n\nFor example, this creates a connection that allows access from any origin, pings\nevery 15 seconds and is retryable every 10 seconds if the connection is broken:\n\n```js\nvar es = new EventSource(request, response, {\n  headers: {\'Access-Control-Allow-Origin\': \'*\'},\n  ping:    15,\n  retry:   10\n});\n```\n\nYou can send a ping message at any time by calling `es.ping()`. Unlike\nWebSocket, the client does not send a response to this; it is merely to send\nsome data over the wire to keep the connection alive.\n\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2010-2013 James Coglan\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \'Software\'), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n',
+225 silly resolved     readmeFilename: 'README.md',
+225 silly resolved     _id: 'faye-websocket@0.7.2',
+225 silly resolved     dist:
+225 silly resolved      { shasum: '799970386f87105592397434b02abfa4f07bdf70',
+225 silly resolved        tarball: 'http://registry.npmjs.org/faye-websocket/-/faye-websocket-0.7.2.tgz' },
+225 silly resolved     _from: 'faye-websocket@~0.7.2',
+225 silly resolved     _npmVersion: '1.3.21',
+225 silly resolved     _npmUser: { name: 'jcoglan', email: 'jcoglan@gmail.com' },
+225 silly resolved     maintainers: [ [Object] ],
+225 silly resolved     directories: {},
+225 silly resolved     _shasum: '799970386f87105592397434b02abfa4f07bdf70',
+225 silly resolved     _resolved: 'https://registry.npmjs.org/faye-websocket/-/faye-websocket-0.7.2.tgz' },
+225 silly resolved   { name: 'debug',
+225 silly resolved     version: '0.8.1',
+225 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/debug.git' },
+225 silly resolved     description: 'small debugging utility',
+225 silly resolved     keywords: [ 'debug', 'log', 'debugger' ],
+225 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+225 silly resolved     dependencies: {},
+225 silly resolved     devDependencies: { mocha: '*' },
+225 silly resolved     main: 'lib/debug.js',
+225 silly resolved     browser: './debug.js',
+225 silly resolved     engines: { node: '*' },
+225 silly resolved     files: [ 'lib/debug.js', 'debug.js' ],
+225 silly resolved     component: { scripts: [Object] },
+225 silly resolved     bugs: { url: 'https://github.com/visionmedia/debug/issues' },
+225 silly resolved     homepage: 'https://github.com/visionmedia/debug',
+225 silly resolved     _id: 'debug@0.8.1',
+225 silly resolved     dist:
+225 silly resolved      { shasum: '20ff4d26f5e422cb68a1bacbbb61039ad8c1c130',
+225 silly resolved        tarball: 'http://registry.npmjs.org/debug/-/debug-0.8.1.tgz' },
+225 silly resolved     _from: 'debug@~0.8.1',
+225 silly resolved     _npmVersion: '1.3.21',
+225 silly resolved     _npmUser: { name: 'tjholowaychuk', email: 'tj@vision-media.ca' },
+225 silly resolved     maintainers: [ [Object] ],
+225 silly resolved     directories: {},
+225 silly resolved     _shasum: '20ff4d26f5e422cb68a1bacbbb61039ad8c1c130',
+225 silly resolved     _resolved: 'https://registry.npmjs.org/debug/-/debug-0.8.1.tgz',
+225 silly resolved     readme: 'ERROR: No README data found!' } ]
+226 info install body-parser@1.8.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+227 info install parseurl@1.3.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+228 info install qs@2.2.3 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+229 info install faye-websocket@0.7.2 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+230 info install debug@0.8.1 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+231 info installOne body-parser@1.8.0
+232 info installOne parseurl@1.3.0
+233 info installOne qs@2.2.3
+234 info installOne faye-websocket@0.7.2
+235 info installOne debug@0.8.1
+236 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser unbuild
+237 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl unbuild
+238 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs unbuild
+239 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket unbuild
+240 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug unbuild
+241 verbose tar unpack /Users/edwincaro/.npm/body-parser/1.8.0/package.tgz
+242 silly lockFile 83639171-tiny-lr-node-modules-body-parser tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+243 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser /Users/edwincaro/.npm/83639171-tiny-lr-node-modules-body-parser.lock
+244 silly lockFile 08ba5f3e-pm-body-parser-1-8-0-package-tgz tar:///Users/edwincaro/.npm/body-parser/1.8.0/package.tgz
+245 verbose lock tar:///Users/edwincaro/.npm/body-parser/1.8.0/package.tgz /Users/edwincaro/.npm/08ba5f3e-pm-body-parser-1-8-0-package-tgz.lock
+246 verbose tar unpack /Users/edwincaro/.npm/parseurl/1.3.0/package.tgz
+247 silly lockFile 5f919295-es-tiny-lr-node-modules-parseurl tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl
+248 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl /Users/edwincaro/.npm/5f919295-es-tiny-lr-node-modules-parseurl.lock
+249 silly lockFile 9e3a2fc6-o-npm-parseurl-1-3-0-package-tgz tar:///Users/edwincaro/.npm/parseurl/1.3.0/package.tgz
+250 verbose lock tar:///Users/edwincaro/.npm/parseurl/1.3.0/package.tgz /Users/edwincaro/.npm/9e3a2fc6-o-npm-parseurl-1-3-0-package-tgz.lock
+251 verbose tar unpack /Users/edwincaro/.npm/qs/2.2.3/package.tgz
+252 silly lockFile bb260086--modules-tiny-lr-node-modules-qs tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs
+253 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs /Users/edwincaro/.npm/bb260086--modules-tiny-lr-node-modules-qs.lock
+254 silly lockFile 42e59b23-wincaro-npm-qs-2-2-3-package-tgz tar:///Users/edwincaro/.npm/qs/2.2.3/package.tgz
+255 verbose lock tar:///Users/edwincaro/.npm/qs/2.2.3/package.tgz /Users/edwincaro/.npm/42e59b23-wincaro-npm-qs-2-2-3-package-tgz.lock
+256 verbose tar unpack /Users/edwincaro/.npm/faye-websocket/0.7.2/package.tgz
+257 silly lockFile c748ecea-y-lr-node-modules-faye-websocket tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+258 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket /Users/edwincaro/.npm/c748ecea-y-lr-node-modules-faye-websocket.lock
+259 silly lockFile ca8db4c8-faye-websocket-0-7-2-package-tgz tar:///Users/edwincaro/.npm/faye-websocket/0.7.2/package.tgz
+260 verbose lock tar:///Users/edwincaro/.npm/faye-websocket/0.7.2/package.tgz /Users/edwincaro/.npm/ca8db4c8-faye-websocket-0-7-2-package-tgz.lock
+261 verbose tar unpack /Users/edwincaro/.npm/debug/0.8.1/package.tgz
+262 silly lockFile f5bbe3b8-dules-tiny-lr-node-modules-debug tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug
+263 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug /Users/edwincaro/.npm/f5bbe3b8-dules-tiny-lr-node-modules-debug.lock
+264 silly lockFile ac78f0b8-caro-npm-debug-0-8-1-package-tgz tar:///Users/edwincaro/.npm/debug/0.8.1/package.tgz
+265 verbose lock tar:///Users/edwincaro/.npm/debug/0.8.1/package.tgz /Users/edwincaro/.npm/ac78f0b8-caro-npm-debug-0-8-1-package-tgz.lock
+266 silly gunzTarPerm modes [ '755', '644' ]
+267 silly gunzTarPerm modes [ '755', '644' ]
+268 silly gunzTarPerm modes [ '755', '644' ]
+269 silly gunzTarPerm modes [ '755', '644' ]
+270 silly gunzTarPerm modes [ '755', '644' ]
+271 silly gunzTarPerm extractEntry package.json
+272 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+273 silly gunzTarPerm extractEntry package.json
+274 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+275 silly gunzTarPerm extractEntry package.json
+276 silly gunzTarPerm extractEntry package.json
+277 silly gunzTarPerm extractEntry package.json
+278 silly gunzTarPerm extractEntry README.md
+279 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+280 silly gunzTarPerm extractEntry LICENSE
+281 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+282 silly gunzTarPerm extractEntry .npmignore
+283 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+284 silly gunzTarPerm extractEntry README.md
+285 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+286 silly gunzTarPerm extractEntry .npmignore
+287 silly gunzTarPerm extractEntry README.md
+288 silly gunzTarPerm extractEntry debug.js
+289 silly gunzTarPerm extractEntry Readme.md
+290 silly gunzTarPerm extractEntry README.md
+291 silly gunzTarPerm extractEntry CHANGELOG.md
+292 silly gunzTarPerm extractEntry LICENSE
+293 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+294 silly gunzTarPerm extractEntry index.js
+295 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+296 silly gunzTarPerm extractEntry index.js
+297 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+298 silly gunzTarPerm extractEntry HISTORY.md
+299 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+300 silly gunzTarPerm extractEntry LICENSE
+301 silly gunzTarPerm extractEntry index.js
+302 silly gunzTarPerm extractEntry lib/debug.js
+303 silly gunzTarPerm extractEntry examples/autobahn_client.js
+304 silly gunzTarPerm extractEntry examples/client.js
+305 silly gunzTarPerm extractEntry examples/server.js
+306 silly gunzTarPerm extractEntry examples/haproxy.conf
+307 silly gunzTarPerm extractEntry examples/sse.html
+308 silly gunzTarPerm extractEntry examples/ws.html
+309 silly gunzTarPerm extractEntry lib/faye/eventsource.js
+310 silly gunzTarPerm extractEntry lib/faye/websocket.js
+311 silly gunzTarPerm extractEntry lib/faye/websocket/api.js
+312 silly gunzTarPerm extractEntry lib/faye/websocket/client.js
+313 silly gunzTarPerm extractEntry lib/faye/websocket/api/event.js
+314 silly gunzTarPerm extractEntry lib/faye/websocket/api/event_target.js
+315 silly gunzTarPerm extractEntry CHANGELOG.md
+316 silly gunzTarPerm extractEntry CONTRIBUTING.md
+317 silly gunzTarPerm extractEntry Makefile
+318 silly gunzTarPerm extractEntry .jshintignore
+319 silly gunzTarPerm extractEntry .jshintrc
+320 silly gunzTarPerm extractEntry lib/index.js
+321 silly gunzTarPerm extractEntry lib/parse.js
+322 silly gunzTarPerm extractEntry lib/stringify.js
+323 silly gunzTarPerm extractEntry lib/utils.js
+324 silly gunzTarPerm extractEntry .travis.yml
+325 silly gunzTarPerm extractEntry test/parse.js
+326 silly gunzTarPerm extractEntry test/stringify.js
+327 silly gunzTarPerm extractEntry HISTORY.md
+328 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+329 silly gunzTarPerm extractEntry lib/read.js
+330 silly gunzTarPerm modified mode [ 'lib/read.js', 438, 420 ]
+331 silly gunzTarPerm extractEntry lib/types/json.js
+332 silly gunzTarPerm modified mode [ 'lib/types/json.js', 438, 420 ]
+333 silly gunzTarPerm extractEntry lib/types/raw.js
+334 silly gunzTarPerm modified mode [ 'lib/types/raw.js', 438, 420 ]
+335 silly gunzTarPerm extractEntry lib/types/text.js
+336 silly gunzTarPerm modified mode [ 'lib/types/text.js', 438, 420 ]
+337 silly gunzTarPerm extractEntry lib/types/urlencoded.js
+338 silly gunzTarPerm modified mode [ 'lib/types/urlencoded.js', 438, 420 ]
+339 silly lockFile f5bbe3b8-dules-tiny-lr-node-modules-debug tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug
+340 silly lockFile f5bbe3b8-dules-tiny-lr-node-modules-debug tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug
+341 silly lockFile ac78f0b8-caro-npm-debug-0-8-1-package-tgz tar:///Users/edwincaro/.npm/debug/0.8.1/package.tgz
+342 silly lockFile ac78f0b8-caro-npm-debug-0-8-1-package-tgz tar:///Users/edwincaro/.npm/debug/0.8.1/package.tgz
+343 silly lockFile 5f919295-es-tiny-lr-node-modules-parseurl tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl
+344 silly lockFile 5f919295-es-tiny-lr-node-modules-parseurl tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl
+345 silly lockFile 9e3a2fc6-o-npm-parseurl-1-3-0-package-tgz tar:///Users/edwincaro/.npm/parseurl/1.3.0/package.tgz
+346 silly lockFile 9e3a2fc6-o-npm-parseurl-1-3-0-package-tgz tar:///Users/edwincaro/.npm/parseurl/1.3.0/package.tgz
+347 info preinstall debug@0.8.1
+348 info preinstall parseurl@1.3.0
+349 verbose readDependencies using package.json deps
+350 verbose readDependencies using package.json deps
+351 silly resolved []
+352 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug
+353 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/debug
+354 verbose linkStuff [ false,
+354 verbose linkStuff   false,
+354 verbose linkStuff   false,
+354 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules' ]
+355 info linkStuff debug@0.8.1
+356 verbose linkBins debug@0.8.1
+357 verbose linkMans debug@0.8.1
+358 verbose rebuildBundles debug@0.8.1
+359 verbose readDependencies using package.json deps
+360 info install debug@0.8.1
+361 verbose readDependencies using package.json deps
+362 silly resolved []
+363 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl
+364 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/parseurl
+365 verbose linkStuff [ false,
+365 verbose linkStuff   false,
+365 verbose linkStuff   false,
+365 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules' ]
+366 info linkStuff parseurl@1.3.0
+367 verbose linkBins parseurl@1.3.0
+368 verbose linkMans parseurl@1.3.0
+369 verbose rebuildBundles parseurl@1.3.0
+370 info install parseurl@1.3.0
+371 info postinstall debug@0.8.1
+372 info postinstall parseurl@1.3.0
+373 silly lockFile 83639171-tiny-lr-node-modules-body-parser tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+374 silly lockFile 83639171-tiny-lr-node-modules-body-parser tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+375 silly lockFile 08ba5f3e-pm-body-parser-1-8-0-package-tgz tar:///Users/edwincaro/.npm/body-parser/1.8.0/package.tgz
+376 silly lockFile 08ba5f3e-pm-body-parser-1-8-0-package-tgz tar:///Users/edwincaro/.npm/body-parser/1.8.0/package.tgz
+377 info preinstall body-parser@1.8.0
+378 verbose readDependencies using package.json deps
+379 verbose readDependencies using package.json deps
+380 verbose cache add [ 'bytes@1.0.0', null ]
+381 verbose cache add name=undefined spec="bytes@1.0.0" args=["bytes@1.0.0",null]
+382 verbose parsed url { protocol: null,
+382 verbose parsed url   slashes: null,
+382 verbose parsed url   auth: null,
+382 verbose parsed url   host: null,
+382 verbose parsed url   port: null,
+382 verbose parsed url   hostname: null,
+382 verbose parsed url   hash: null,
+382 verbose parsed url   search: null,
+382 verbose parsed url   query: null,
+382 verbose parsed url   pathname: 'bytes@1.0.0',
+382 verbose parsed url   path: 'bytes@1.0.0',
+382 verbose parsed url   href: 'bytes@1.0.0' }
+383 verbose cache add [ 'depd@0.4.4', null ]
+384 verbose cache add name=undefined spec="depd@0.4.4" args=["depd@0.4.4",null]
+385 verbose parsed url { protocol: null,
+385 verbose parsed url   slashes: null,
+385 verbose parsed url   auth: null,
+385 verbose parsed url   host: null,
+385 verbose parsed url   port: null,
+385 verbose parsed url   hostname: null,
+385 verbose parsed url   hash: null,
+385 verbose parsed url   search: null,
+385 verbose parsed url   query: null,
+385 verbose parsed url   pathname: 'depd@0.4.4',
+385 verbose parsed url   path: 'depd@0.4.4',
+385 verbose parsed url   href: 'depd@0.4.4' }
+386 verbose cache add name="bytes" spec="1.0.0" args=["bytes","1.0.0"]
+387 verbose parsed url { protocol: null,
+387 verbose parsed url   slashes: null,
+387 verbose parsed url   auth: null,
+387 verbose parsed url   host: null,
+387 verbose parsed url   port: null,
+387 verbose parsed url   hostname: null,
+387 verbose parsed url   hash: null,
+387 verbose parsed url   search: null,
+387 verbose parsed url   query: null,
+387 verbose parsed url   pathname: '1.0.0',
+387 verbose parsed url   path: '1.0.0',
+387 verbose parsed url   href: '1.0.0' }
+388 verbose addNamed [ 'bytes', '1.0.0' ]
+389 verbose addNamed [ '1.0.0', '1.0.0' ]
+390 silly lockFile b4c055fe-bytes-1-0-0 bytes@1.0.0
+391 verbose lock bytes@1.0.0 /Users/edwincaro/.npm/b4c055fe-bytes-1-0-0.lock
+392 verbose cache add name="depd" spec="0.4.4" args=["depd","0.4.4"]
+393 verbose parsed url { protocol: null,
+393 verbose parsed url   slashes: null,
+393 verbose parsed url   auth: null,
+393 verbose parsed url   host: null,
+393 verbose parsed url   port: null,
+393 verbose parsed url   hostname: null,
+393 verbose parsed url   hash: null,
+393 verbose parsed url   search: null,
+393 verbose parsed url   query: null,
+393 verbose parsed url   pathname: '0.4.4',
+393 verbose parsed url   path: '0.4.4',
+393 verbose parsed url   href: '0.4.4' }
+394 verbose addNamed [ 'depd', '0.4.4' ]
+395 verbose addNamed [ '0.4.4', '0.4.4' ]
+396 silly lockFile 83a4aeb1-depd-0-4-4 depd@0.4.4
+397 verbose lock depd@0.4.4 /Users/edwincaro/.npm/83a4aeb1-depd-0-4-4.lock
+398 verbose cache add [ 'iconv-lite@0.4.4', null ]
+399 verbose cache add name=undefined spec="iconv-lite@0.4.4" args=["iconv-lite@0.4.4",null]
+400 verbose parsed url { protocol: null,
+400 verbose parsed url   slashes: null,
+400 verbose parsed url   auth: null,
+400 verbose parsed url   host: null,
+400 verbose parsed url   port: null,
+400 verbose parsed url   hostname: null,
+400 verbose parsed url   hash: null,
+400 verbose parsed url   search: null,
+400 verbose parsed url   query: null,
+400 verbose parsed url   pathname: 'iconv-lite@0.4.4',
+400 verbose parsed url   path: 'iconv-lite@0.4.4',
+400 verbose parsed url   href: 'iconv-lite@0.4.4' }
+401 verbose cache add name="iconv-lite" spec="0.4.4" args=["iconv-lite","0.4.4"]
+402 verbose parsed url { protocol: null,
+402 verbose parsed url   slashes: null,
+402 verbose parsed url   auth: null,
+402 verbose parsed url   host: null,
+402 verbose parsed url   port: null,
+402 verbose parsed url   hostname: null,
+402 verbose parsed url   hash: null,
+402 verbose parsed url   search: null,
+402 verbose parsed url   query: null,
+402 verbose parsed url   pathname: '0.4.4',
+402 verbose parsed url   path: '0.4.4',
+402 verbose parsed url   href: '0.4.4' }
+403 verbose addNamed [ 'iconv-lite', '0.4.4' ]
+404 verbose addNamed [ '0.4.4', '0.4.4' ]
+405 silly lockFile b350677f-iconv-lite-0-4-4 iconv-lite@0.4.4
+406 verbose lock iconv-lite@0.4.4 /Users/edwincaro/.npm/b350677f-iconv-lite-0-4-4.lock
+407 verbose cache add [ 'media-typer@0.2.0', null ]
+408 verbose cache add name=undefined spec="media-typer@0.2.0" args=["media-typer@0.2.0",null]
+409 verbose parsed url { protocol: null,
+409 verbose parsed url   slashes: null,
+409 verbose parsed url   auth: null,
+409 verbose parsed url   host: null,
+409 verbose parsed url   port: null,
+409 verbose parsed url   hostname: null,
+409 verbose parsed url   hash: null,
+409 verbose parsed url   search: null,
+409 verbose parsed url   query: null,
+409 verbose parsed url   pathname: 'media-typer@0.2.0',
+409 verbose parsed url   path: 'media-typer@0.2.0',
+409 verbose parsed url   href: 'media-typer@0.2.0' }
+410 verbose cache add name="media-typer" spec="0.2.0" args=["media-typer","0.2.0"]
+411 verbose parsed url { protocol: null,
+411 verbose parsed url   slashes: null,
+411 verbose parsed url   auth: null,
+411 verbose parsed url   host: null,
+411 verbose parsed url   port: null,
+411 verbose parsed url   hostname: null,
+411 verbose parsed url   hash: null,
+411 verbose parsed url   search: null,
+411 verbose parsed url   query: null,
+411 verbose parsed url   pathname: '0.2.0',
+411 verbose parsed url   path: '0.2.0',
+411 verbose parsed url   href: '0.2.0' }
+412 verbose addNamed [ 'media-typer', '0.2.0' ]
+413 verbose addNamed [ '0.2.0', '0.2.0' ]
+414 silly lockFile 086e09e6-media-typer-0-2-0 media-typer@0.2.0
+415 verbose lock media-typer@0.2.0 /Users/edwincaro/.npm/086e09e6-media-typer-0-2-0.lock
+416 verbose cache add [ 'on-finished@2.1.0', null ]
+417 verbose cache add name=undefined spec="on-finished@2.1.0" args=["on-finished@2.1.0",null]
+418 verbose parsed url { protocol: null,
+418 verbose parsed url   slashes: null,
+418 verbose parsed url   auth: null,
+418 verbose parsed url   host: null,
+418 verbose parsed url   port: null,
+418 verbose parsed url   hostname: null,
+418 verbose parsed url   hash: null,
+418 verbose parsed url   search: null,
+418 verbose parsed url   query: null,
+418 verbose parsed url   pathname: 'on-finished@2.1.0',
+418 verbose parsed url   path: 'on-finished@2.1.0',
+418 verbose parsed url   href: 'on-finished@2.1.0' }
+419 verbose cache add [ 'raw-body@1.3.0', null ]
+420 verbose cache add name=undefined spec="raw-body@1.3.0" args=["raw-body@1.3.0",null]
+421 verbose parsed url { protocol: null,
+421 verbose parsed url   slashes: null,
+421 verbose parsed url   auth: null,
+421 verbose parsed url   host: null,
+421 verbose parsed url   port: null,
+421 verbose parsed url   hostname: null,
+421 verbose parsed url   hash: null,
+421 verbose parsed url   search: null,
+421 verbose parsed url   query: null,
+421 verbose parsed url   pathname: 'raw-body@1.3.0',
+421 verbose parsed url   path: 'raw-body@1.3.0',
+421 verbose parsed url   href: 'raw-body@1.3.0' }
+422 verbose cache add name="on-finished" spec="2.1.0" args=["on-finished","2.1.0"]
+423 verbose parsed url { protocol: null,
+423 verbose parsed url   slashes: null,
+423 verbose parsed url   auth: null,
+423 verbose parsed url   host: null,
+423 verbose parsed url   port: null,
+423 verbose parsed url   hostname: null,
+423 verbose parsed url   hash: null,
+423 verbose parsed url   search: null,
+423 verbose parsed url   query: null,
+423 verbose parsed url   pathname: '2.1.0',
+423 verbose parsed url   path: '2.1.0',
+423 verbose parsed url   href: '2.1.0' }
+424 verbose addNamed [ 'on-finished', '2.1.0' ]
+425 verbose addNamed [ '2.1.0', '2.1.0' ]
+426 silly lockFile 04cf1742-on-finished-2-1-0 on-finished@2.1.0
+427 verbose lock on-finished@2.1.0 /Users/edwincaro/.npm/04cf1742-on-finished-2-1-0.lock
+428 verbose cache add name="raw-body" spec="1.3.0" args=["raw-body","1.3.0"]
+429 verbose parsed url { protocol: null,
+429 verbose parsed url   slashes: null,
+429 verbose parsed url   auth: null,
+429 verbose parsed url   host: null,
+429 verbose parsed url   port: null,
+429 verbose parsed url   hostname: null,
+429 verbose parsed url   hash: null,
+429 verbose parsed url   search: null,
+429 verbose parsed url   query: null,
+429 verbose parsed url   pathname: '1.3.0',
+429 verbose parsed url   path: '1.3.0',
+429 verbose parsed url   href: '1.3.0' }
+430 verbose addNamed [ 'raw-body', '1.3.0' ]
+431 verbose addNamed [ '1.3.0', '1.3.0' ]
+432 silly lockFile 73b13032-raw-body-1-3-0 raw-body@1.3.0
+433 verbose lock raw-body@1.3.0 /Users/edwincaro/.npm/73b13032-raw-body-1-3-0.lock
+434 verbose cache add [ 'type-is@~1.5.0', null ]
+435 verbose cache add name=undefined spec="type-is@~1.5.0" args=["type-is@~1.5.0",null]
+436 verbose parsed url { protocol: null,
+436 verbose parsed url   slashes: null,
+436 verbose parsed url   auth: null,
+436 verbose parsed url   host: null,
+436 verbose parsed url   port: null,
+436 verbose parsed url   hostname: null,
+436 verbose parsed url   hash: null,
+436 verbose parsed url   search: null,
+436 verbose parsed url   query: null,
+436 verbose parsed url   pathname: 'type-is@~1.5.0',
+436 verbose parsed url   path: 'type-is@~1.5.0',
+436 verbose parsed url   href: 'type-is@~1.5.0' }
+437 verbose cache add name="type-is" spec="~1.5.0" args=["type-is","~1.5.0"]
+438 verbose parsed url { protocol: null,
+438 verbose parsed url   slashes: null,
+438 verbose parsed url   auth: null,
+438 verbose parsed url   host: null,
+438 verbose parsed url   port: null,
+438 verbose parsed url   hostname: null,
+438 verbose parsed url   hash: null,
+438 verbose parsed url   search: null,
+438 verbose parsed url   query: null,
+438 verbose parsed url   pathname: '~1.5.0',
+438 verbose parsed url   path: '~1.5.0',
+438 verbose parsed url   href: '~1.5.0' }
+439 verbose addNamed [ 'type-is', '~1.5.0' ]
+440 verbose addNamed [ null, '>=1.5.0-0 <1.6.0-0' ]
+441 silly lockFile 514b24d8-type-is-1-5-0 type-is@~1.5.0
+442 verbose lock type-is@~1.5.0 /Users/edwincaro/.npm/514b24d8-type-is-1-5-0.lock
+443 silly addNameRange { name: 'type-is', range: '>=1.5.0-0 <1.6.0-0', hasData: false }
+444 verbose url raw bytes
+445 verbose url resolving [ 'https://registry.npmjs.org/', './bytes' ]
+446 verbose url resolved https://registry.npmjs.org/bytes
+447 info trying registry request attempt 1 at 11:03:00
+448 verbose etag "2I1RQXBZ6KL0L108NGZDZ65H6"
+449 http GET https://registry.npmjs.org/bytes
+450 verbose url raw depd
+451 verbose url resolving [ 'https://registry.npmjs.org/', './depd' ]
+452 verbose url resolved https://registry.npmjs.org/depd
+453 info trying registry request attempt 1 at 11:03:00
+454 verbose etag "6JEZJ5NV2DO99JIMFD5BNQ20B"
+455 http GET https://registry.npmjs.org/depd
+456 verbose url raw iconv-lite
+457 verbose url resolving [ 'https://registry.npmjs.org/', './iconv-lite' ]
+458 verbose url resolved https://registry.npmjs.org/iconv-lite
+459 info trying registry request attempt 1 at 11:03:00
+460 verbose etag "ET5ZKKL4E15ZMNF6C8W5BXOF0"
+461 http GET https://registry.npmjs.org/iconv-lite
+462 verbose url raw media-typer
+463 verbose url resolving [ 'https://registry.npmjs.org/', './media-typer' ]
+464 verbose url resolved https://registry.npmjs.org/media-typer
+465 info trying registry request attempt 1 at 11:03:00
+466 verbose etag "69HW474GKMB226AJ71BJUEINT"
+467 http GET https://registry.npmjs.org/media-typer
+468 verbose url raw on-finished
+469 verbose url resolving [ 'https://registry.npmjs.org/', './on-finished' ]
+470 verbose url resolved https://registry.npmjs.org/on-finished
+471 info trying registry request attempt 1 at 11:03:00
+472 verbose etag "A1FWWSNAPWX0MSWHNPCMEKIAK"
+473 http GET https://registry.npmjs.org/on-finished
+474 verbose url raw raw-body
+475 verbose url resolving [ 'https://registry.npmjs.org/', './raw-body' ]
+476 verbose url resolved https://registry.npmjs.org/raw-body
+477 info trying registry request attempt 1 at 11:03:00
+478 verbose etag "DGSGV6WSCK440RWDK2FSS99L3"
+479 http GET https://registry.npmjs.org/raw-body
+480 verbose url raw type-is
+481 verbose url resolving [ 'https://registry.npmjs.org/', './type-is' ]
+482 verbose url resolved https://registry.npmjs.org/type-is
+483 info trying registry request attempt 1 at 11:03:00
+484 verbose etag "707IBIACM1TZKPXKE39LBRETA"
+485 http GET https://registry.npmjs.org/type-is
+486 silly lockFile bb260086--modules-tiny-lr-node-modules-qs tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs
+487 silly lockFile bb260086--modules-tiny-lr-node-modules-qs tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs
+488 silly lockFile 42e59b23-wincaro-npm-qs-2-2-3-package-tgz tar:///Users/edwincaro/.npm/qs/2.2.3/package.tgz
+489 silly lockFile 42e59b23-wincaro-npm-qs-2-2-3-package-tgz tar:///Users/edwincaro/.npm/qs/2.2.3/package.tgz
+490 info preinstall qs@2.2.3
+491 verbose readDependencies using package.json deps
+492 verbose readDependencies using package.json deps
+493 silly resolved []
+494 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs
+495 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/qs
+496 verbose linkStuff [ false,
+496 verbose linkStuff   false,
+496 verbose linkStuff   false,
+496 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules' ]
+497 info linkStuff qs@2.2.3
+498 verbose linkBins qs@2.2.3
+499 verbose linkMans qs@2.2.3
+500 verbose rebuildBundles qs@2.2.3
+501 info install qs@2.2.3
+502 info postinstall qs@2.2.3
+503 silly lockFile c748ecea-y-lr-node-modules-faye-websocket tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+504 silly lockFile c748ecea-y-lr-node-modules-faye-websocket tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+505 silly lockFile ca8db4c8-faye-websocket-0-7-2-package-tgz tar:///Users/edwincaro/.npm/faye-websocket/0.7.2/package.tgz
+506 silly lockFile ca8db4c8-faye-websocket-0-7-2-package-tgz tar:///Users/edwincaro/.npm/faye-websocket/0.7.2/package.tgz
+507 info preinstall faye-websocket@0.7.2
+508 verbose readDependencies using package.json deps
+509 verbose readDependencies using package.json deps
+510 verbose cache add [ 'websocket-driver@>=0.3.1', null ]
+511 verbose cache add name=undefined spec="websocket-driver@>=0.3.1" args=["websocket-driver@>=0.3.1",null]
+512 verbose parsed url { protocol: null,
+512 verbose parsed url   slashes: null,
+512 verbose parsed url   auth: null,
+512 verbose parsed url   host: null,
+512 verbose parsed url   port: null,
+512 verbose parsed url   hostname: null,
+512 verbose parsed url   hash: null,
+512 verbose parsed url   search: null,
+512 verbose parsed url   query: null,
+512 verbose parsed url   pathname: 'websocket-driver@%3E=0.3.1',
+512 verbose parsed url   path: 'websocket-driver@%3E=0.3.1',
+512 verbose parsed url   href: 'websocket-driver@%3E=0.3.1' }
+513 verbose cache add name="websocket-driver" spec=">=0.3.1" args=["websocket-driver",">=0.3.1"]
+514 verbose parsed url { protocol: null,
+514 verbose parsed url   slashes: null,
+514 verbose parsed url   auth: null,
+514 verbose parsed url   host: null,
+514 verbose parsed url   port: null,
+514 verbose parsed url   hostname: null,
+514 verbose parsed url   hash: null,
+514 verbose parsed url   search: null,
+514 verbose parsed url   query: null,
+514 verbose parsed url   pathname: '%3E=0.3.1',
+514 verbose parsed url   path: '%3E=0.3.1',
+514 verbose parsed url   href: '%3E=0.3.1' }
+515 verbose addNamed [ 'websocket-driver', '>=0.3.1' ]
+516 verbose addNamed [ null, '>=0.3.1' ]
+517 silly lockFile 27116e03-websocket-driver-0-3-1 websocket-driver@>=0.3.1
+518 verbose lock websocket-driver@>=0.3.1 /Users/edwincaro/.npm/27116e03-websocket-driver-0-3-1.lock
+519 silly addNameRange { name: 'websocket-driver', range: '>=0.3.1', hasData: false }
+520 verbose url raw websocket-driver
+521 verbose url resolving [ 'https://registry.npmjs.org/', './websocket-driver' ]
+522 verbose url resolved https://registry.npmjs.org/websocket-driver
+523 info trying registry request attempt 1 at 11:03:00
+524 verbose etag "73TZ4FMS2HZ3Z9JDOBUIDZE7T"
+525 http GET https://registry.npmjs.org/websocket-driver
+526 http 304 https://registry.npmjs.org/bytes
+527 silly registry.get cb [ 304,
+527 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+527 silly registry.get     server: 'Apache',
+527 silly registry.get     via: '1.1 varnish',
+527 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+527 silly registry.get     'cache-control': 'max-age=60',
+527 silly registry.get     etag: '"2I1RQXBZ6KL0L108NGZDZ65H6"',
+527 silly registry.get     'x-served-by': 'cache-ord1724-ORD',
+527 silly registry.get     'x-cache': 'HIT',
+527 silly registry.get     'x-cache-hits': '1',
+527 silly registry.get     'x-timer': 'S1410105389.076483,VS0,VE0',
+527 silly registry.get     vary: 'Accept',
+527 silly registry.get     'content-length': '0',
+527 silly registry.get     'keep-alive': 'timeout=10, max=50',
+527 silly registry.get     connection: 'Keep-Alive' } ]
+528 verbose etag bytes from cache
+529 http 304 https://registry.npmjs.org/depd
+530 silly registry.get cb [ 304,
+530 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+530 silly registry.get     server: 'Apache',
+530 silly registry.get     via: '1.1 varnish',
+530 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+530 silly registry.get     'cache-control': 'max-age=60',
+530 silly registry.get     etag: '"6JEZJ5NV2DO99JIMFD5BNQ20B"',
+530 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+530 silly registry.get     'x-cache': 'HIT',
+530 silly registry.get     'x-cache-hits': '1',
+530 silly registry.get     'x-timer': 'S1410105389.079568,VS0,VE0',
+530 silly registry.get     vary: 'Accept',
+530 silly registry.get     'content-length': '0',
+530 silly registry.get     'keep-alive': 'timeout=10, max=50',
+530 silly registry.get     connection: 'Keep-Alive' } ]
+531 verbose etag depd from cache
+532 silly lockFile b4c055fe-bytes-1-0-0 bytes@1.0.0
+533 silly lockFile b4c055fe-bytes-1-0-0 bytes@1.0.0
+534 silly lockFile 83a4aeb1-depd-0-4-4 depd@0.4.4
+535 silly lockFile 83a4aeb1-depd-0-4-4 depd@0.4.4
+536 http 304 https://registry.npmjs.org/iconv-lite
+537 silly registry.get cb [ 304,
+537 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+537 silly registry.get     server: 'Apache',
+537 silly registry.get     via: '1.1 varnish',
+537 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+537 silly registry.get     'cache-control': 'max-age=60',
+537 silly registry.get     etag: '"ET5ZKKL4E15ZMNF6C8W5BXOF0"',
+537 silly registry.get     'x-served-by': 'cache-ord1730-ORD',
+537 silly registry.get     'x-cache': 'HIT',
+537 silly registry.get     'x-cache-hits': '1',
+537 silly registry.get     'x-timer': 'S1410105389.088238,VS0,VE0',
+537 silly registry.get     vary: 'Accept',
+537 silly registry.get     'content-length': '0',
+537 silly registry.get     'keep-alive': 'timeout=10, max=50',
+537 silly registry.get     connection: 'Keep-Alive' } ]
+538 verbose etag iconv-lite from cache
+539 http 304 https://registry.npmjs.org/media-typer
+540 silly registry.get cb [ 304,
+540 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+540 silly registry.get     server: 'Apache',
+540 silly registry.get     via: '1.1 varnish',
+540 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+540 silly registry.get     'cache-control': 'max-age=60',
+540 silly registry.get     etag: '"69HW474GKMB226AJ71BJUEINT"',
+540 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+540 silly registry.get     'x-cache': 'HIT',
+540 silly registry.get     'x-cache-hits': '1',
+540 silly registry.get     'x-timer': 'S1410105389.090234,VS0,VE0',
+540 silly registry.get     vary: 'Accept',
+540 silly registry.get     'content-length': '0',
+540 silly registry.get     'keep-alive': 'timeout=10, max=50',
+540 silly registry.get     connection: 'Keep-Alive' } ]
+541 verbose etag media-typer from cache
+542 silly lockFile b350677f-iconv-lite-0-4-4 iconv-lite@0.4.4
+543 silly lockFile b350677f-iconv-lite-0-4-4 iconv-lite@0.4.4
+544 silly lockFile 086e09e6-media-typer-0-2-0 media-typer@0.2.0
+545 silly lockFile 086e09e6-media-typer-0-2-0 media-typer@0.2.0
+546 http 304 https://registry.npmjs.org/on-finished
+547 silly registry.get cb [ 304,
+547 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+547 silly registry.get     server: 'Apache',
+547 silly registry.get     via: '1.1 varnish',
+547 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+547 silly registry.get     'cache-control': 'max-age=60',
+547 silly registry.get     etag: '"A1FWWSNAPWX0MSWHNPCMEKIAK"',
+547 silly registry.get     'x-served-by': 'cache-ord1735-ORD',
+547 silly registry.get     'x-cache': 'HIT',
+547 silly registry.get     'x-cache-hits': '1',
+547 silly registry.get     'x-timer': 'S1410105389.098705,VS0,VE0',
+547 silly registry.get     vary: 'Accept',
+547 silly registry.get     'content-length': '0',
+547 silly registry.get     'keep-alive': 'timeout=10, max=50',
+547 silly registry.get     connection: 'Keep-Alive' } ]
+548 verbose etag on-finished from cache
+549 silly lockFile 04cf1742-on-finished-2-1-0 on-finished@2.1.0
+550 silly lockFile 04cf1742-on-finished-2-1-0 on-finished@2.1.0
+551 http 304 https://registry.npmjs.org/raw-body
+552 silly registry.get cb [ 304,
+552 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+552 silly registry.get     server: 'Apache',
+552 silly registry.get     via: '1.1 varnish',
+552 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+552 silly registry.get     'cache-control': 'max-age=60',
+552 silly registry.get     etag: '"DGSGV6WSCK440RWDK2FSS99L3"',
+552 silly registry.get     'x-served-by': 'cache-ord1724-ORD',
+552 silly registry.get     'x-cache': 'HIT',
+552 silly registry.get     'x-cache-hits': '1',
+552 silly registry.get     'x-timer': 'S1410105389.123571,VS0,VE0',
+552 silly registry.get     vary: 'Accept',
+552 silly registry.get     'content-length': '0',
+552 silly registry.get     'keep-alive': 'timeout=10, max=49',
+552 silly registry.get     connection: 'Keep-Alive' } ]
+553 verbose etag raw-body from cache
+554 http 304 https://registry.npmjs.org/type-is
+555 silly registry.get cb [ 304,
+555 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+555 silly registry.get     server: 'Apache',
+555 silly registry.get     via: '1.1 varnish',
+555 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+555 silly registry.get     'cache-control': 'max-age=60',
+555 silly registry.get     etag: '"707IBIACM1TZKPXKE39LBRETA"',
+555 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+555 silly registry.get     'x-cache': 'HIT',
+555 silly registry.get     'x-cache-hits': '1',
+555 silly registry.get     'x-timer': 'S1410105389.126600,VS0,VE0',
+555 silly registry.get     vary: 'Accept',
+555 silly registry.get     'content-length': '0',
+555 silly registry.get     'keep-alive': 'timeout=10, max=49',
+555 silly registry.get     connection: 'Keep-Alive' } ]
+556 verbose etag type-is from cache
+557 silly lockFile 73b13032-raw-body-1-3-0 raw-body@1.3.0
+558 silly lockFile 73b13032-raw-body-1-3-0 raw-body@1.3.0
+559 silly addNameRange number 2 { name: 'type-is', range: '>=1.5.0-0 <1.6.0-0', hasData: true }
+560 silly addNameRange versions [ 'type-is',
+560 silly addNameRange   [ '1.0.0',
+560 silly addNameRange     '1.0.1',
+560 silly addNameRange     '1.1.0',
+560 silly addNameRange     '1.2.0',
+560 silly addNameRange     '1.2.1',
+560 silly addNameRange     '1.2.2',
+560 silly addNameRange     '1.3.0',
+560 silly addNameRange     '1.3.1',
+560 silly addNameRange     '1.3.2',
+560 silly addNameRange     '1.4.0',
+560 silly addNameRange     '1.5.0' ] ]
+561 verbose addNamed [ 'type-is', '1.5.0' ]
+562 verbose addNamed [ '1.5.0', '1.5.0' ]
+563 silly lockFile b729c916-type-is-1-5-0 type-is@1.5.0
+564 verbose lock type-is@1.5.0 /Users/edwincaro/.npm/b729c916-type-is-1-5-0.lock
+565 silly lockFile b729c916-type-is-1-5-0 type-is@1.5.0
+566 silly lockFile b729c916-type-is-1-5-0 type-is@1.5.0
+567 silly lockFile 514b24d8-type-is-1-5-0 type-is@~1.5.0
+568 silly lockFile 514b24d8-type-is-1-5-0 type-is@~1.5.0
+569 http 304 https://registry.npmjs.org/websocket-driver
+570 silly registry.get cb [ 304,
+570 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+570 silly registry.get     server: 'Apache',
+570 silly registry.get     via: '1.1 varnish',
+570 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+570 silly registry.get     'cache-control': 'max-age=60',
+570 silly registry.get     etag: '"73TZ4FMS2HZ3Z9JDOBUIDZE7T"',
+570 silly registry.get     'x-served-by': 'cache-ord1730-ORD',
+570 silly registry.get     'x-cache': 'HIT',
+570 silly registry.get     'x-cache-hits': '1',
+570 silly registry.get     'x-timer': 'S1410105389.146592,VS0,VE0',
+570 silly registry.get     vary: 'Accept',
+570 silly registry.get     'content-length': '0',
+570 silly registry.get     'keep-alive': 'timeout=10, max=49',
+570 silly registry.get     connection: 'Keep-Alive' } ]
+571 verbose etag websocket-driver from cache
+572 silly resolved [ { name: 'bytes',
+572 silly resolved     author:
+572 silly resolved      { name: 'TJ Holowaychuk',
+572 silly resolved        email: 'tj@vision-media.ca',
+572 silly resolved        url: 'http://tjholowaychuk.com' },
+572 silly resolved     description: 'byte size string parser / serializer',
+572 silly resolved     repository:
+572 silly resolved      { type: 'git',
+572 silly resolved        url: 'https://github.com/visionmedia/bytes.js.git' },
+572 silly resolved     version: '1.0.0',
+572 silly resolved     main: 'index.js',
+572 silly resolved     dependencies: {},
+572 silly resolved     devDependencies: { mocha: '*', should: '*' },
+572 silly resolved     component: { scripts: [Object] },
+572 silly resolved     bugs: { url: 'https://github.com/visionmedia/bytes.js/issues' },
+572 silly resolved     homepage: 'https://github.com/visionmedia/bytes.js',
+572 silly resolved     _id: 'bytes@1.0.0',
+572 silly resolved     dist:
+572 silly resolved      { shasum: '3569ede8ba34315fab99c3e92cb04c7220de1fa8',
+572 silly resolved        tarball: 'http://registry.npmjs.org/bytes/-/bytes-1.0.0.tgz' },
+572 silly resolved     _from: 'bytes@1.0.0',
+572 silly resolved     _npmVersion: '1.4.3',
+572 silly resolved     _npmUser: { name: 'tjholowaychuk', email: 'tj@vision-media.ca' },
+572 silly resolved     maintainers: [ [Object] ],
+572 silly resolved     directories: {},
+572 silly resolved     _shasum: '3569ede8ba34315fab99c3e92cb04c7220de1fa8',
+572 silly resolved     _resolved: 'https://registry.npmjs.org/bytes/-/bytes-1.0.0.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'depd',
+572 silly resolved     description: 'Deprecate all the things',
+572 silly resolved     version: '0.4.4',
+572 silly resolved     author:
+572 silly resolved      { name: 'Douglas Christopher Wilson',
+572 silly resolved        email: 'doug@somethingdoug.com' },
+572 silly resolved     license: 'MIT',
+572 silly resolved     keywords: [ 'deprecate', 'deprecated' ],
+572 silly resolved     repository: { type: 'git', url: 'git://github.com/dougwilson/nodejs-depd' },
+572 silly resolved     devDependencies: { istanbul: '0.3.0', mocha: '~1.20.1', should: '~4.0.4' },
+572 silly resolved     engines: { node: '>= 0.8.0' },
+572 silly resolved     scripts:
+572 silly resolved      { test: 'mocha --reporter spec --bail --require should test/',
+572 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --require should test/',
+572 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --require should test/' },
+572 silly resolved     bugs: { url: 'https://github.com/dougwilson/nodejs-depd/issues' },
+572 silly resolved     homepage: 'https://github.com/dougwilson/nodejs-depd',
+572 silly resolved     _id: 'depd@0.4.4',
+572 silly resolved     dist:
+572 silly resolved      { shasum: '07091fae75f97828d89b4a02a2d4778f0e7c0662',
+572 silly resolved        tarball: 'http://registry.npmjs.org/depd/-/depd-0.4.4.tgz' },
+572 silly resolved     _from: 'depd@0.4.4',
+572 silly resolved     _npmVersion: '1.4.3',
+572 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+572 silly resolved     maintainers: [ [Object] ],
+572 silly resolved     directories: {},
+572 silly resolved     _shasum: '07091fae75f97828d89b4a02a2d4778f0e7c0662',
+572 silly resolved     _resolved: 'https://registry.npmjs.org/depd/-/depd-0.4.4.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'iconv-lite',
+572 silly resolved     description: 'Convert character encodings in pure javascript.',
+572 silly resolved     version: '0.4.4',
+572 silly resolved     license: 'MIT',
+572 silly resolved     keywords: [ 'iconv', 'convert', 'charset', 'icu' ],
+572 silly resolved     author: { name: 'Alexander Shtuchkin', email: 'ashtuchkin@gmail.com' },
+572 silly resolved     contributors:
+572 silly resolved      [ [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object],
+572 silly resolved        [Object] ],
+572 silly resolved     main: './lib/index.js',
+572 silly resolved     homepage: 'https://github.com/ashtuchkin/iconv-lite',
+572 silly resolved     bugs: { url: 'https://github.com/ashtuchkin/iconv-lite/issues' },
+572 silly resolved     repository:
+572 silly resolved      { type: 'git',
+572 silly resolved        url: 'git://github.com/ashtuchkin/iconv-lite.git' },
+572 silly resolved     engines: { node: '>=0.8.0' },
+572 silly resolved     scripts: { test: 'mocha --reporter spec --grep .' },
+572 silly resolved     browser: { './extend-node': false, './streams': false },
+572 silly resolved     devDependencies:
+572 silly resolved      { mocha: '*',
+572 silly resolved        request: '*',
+572 silly resolved        unorm: '*',
+572 silly resolved        errto: '*',
+572 silly resolved        async: '*',
+572 silly resolved        iconv: '~2.1.4' },
+572 silly resolved     gitHead: '9f0b0a7631d167322f47c2202aa3e5b090945131',
+572 silly resolved     _id: 'iconv-lite@0.4.4',
+572 silly resolved     _shasum: 'e95f2e41db0735fc21652f7827a5ee32e63c83a8',
+572 silly resolved     _from: 'iconv-lite@0.4.4',
+572 silly resolved     _npmVersion: '1.4.14',
+572 silly resolved     _npmUser: { name: 'ashtuchkin', email: 'ashtuchkin@gmail.com' },
+572 silly resolved     maintainers: [ [Object] ],
+572 silly resolved     dist:
+572 silly resolved      { shasum: 'e95f2e41db0735fc21652f7827a5ee32e63c83a8',
+572 silly resolved        tarball: 'http://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.4.tgz' },
+572 silly resolved     directories: {},
+572 silly resolved     _resolved: 'https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.4.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'media-typer',
+572 silly resolved     description: 'Simple RFC 6838 media type parser and formatter',
+572 silly resolved     version: '0.2.0',
+572 silly resolved     author:
+572 silly resolved      { name: 'Douglas Christopher Wilson',
+572 silly resolved        email: 'doug@somethingdoug.com' },
+572 silly resolved     license: 'MIT',
+572 silly resolved     repository: { type: 'git', url: 'git://github.com/expressjs/media-typer' },
+572 silly resolved     devDependencies: { istanbul: '0.2.10', mocha: '~1.20.1', should: '~4.0.4' },
+572 silly resolved     engines: { node: '>= 0.8.0' },
+572 silly resolved     scripts:
+572 silly resolved      { test: 'mocha --reporter dot test/',
+572 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/',
+572 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/' },
+572 silly resolved     bugs: { url: 'https://github.com/expressjs/media-typer/issues' },
+572 silly resolved     homepage: 'https://github.com/expressjs/media-typer',
+572 silly resolved     _id: 'media-typer@0.2.0',
+572 silly resolved     dist:
+572 silly resolved      { shasum: 'd8a065213adfeaa2e76321a2b6dda36ff6335984',
+572 silly resolved        tarball: 'http://registry.npmjs.org/media-typer/-/media-typer-0.2.0.tgz' },
+572 silly resolved     _from: 'media-typer@0.2.0',
+572 silly resolved     _npmVersion: '1.4.3',
+572 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+572 silly resolved     maintainers: [ [Object] ],
+572 silly resolved     directories: {},
+572 silly resolved     _shasum: 'd8a065213adfeaa2e76321a2b6dda36ff6335984',
+572 silly resolved     _resolved: 'https://registry.npmjs.org/media-typer/-/media-typer-0.2.0.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'on-finished',
+572 silly resolved     description: 'Execute a callback when a request closes, finishes, or errors',
+572 silly resolved     version: '2.1.0',
+572 silly resolved     contributors: [ [Object], [Object] ],
+572 silly resolved     license: 'MIT',
+572 silly resolved     repository: { type: 'git', url: 'https://github.com/jshttp/on-finished' },
+572 silly resolved     dependencies: { 'ee-first': '1.0.5' },
+572 silly resolved     devDependencies: { istanbul: '0.3.0', mocha: '~1.21.4' },
+572 silly resolved     engine: { node: '>= 0.8.0' },
+572 silly resolved     files: [ 'HISTORY.md', 'LICENSE', 'index.js' ],
+572 silly resolved     scripts:
+572 silly resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+572 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+572 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+572 silly resolved     gitHead: '1ad808e704e2aeda3a7464b78cacead2fb453727',
+572 silly resolved     bugs: { url: 'https://github.com/jshttp/on-finished/issues' },
+572 silly resolved     homepage: 'https://github.com/jshttp/on-finished',
+572 silly resolved     _id: 'on-finished@2.1.0',
+572 silly resolved     _shasum: '0c539f09291e8ffadde0c8a25850fb2cedc7022d',
+572 silly resolved     _from: 'on-finished@2.1.0',
+572 silly resolved     _npmVersion: '1.4.21',
+572 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+572 silly resolved     maintainers: [ [Object], [Object] ],
+572 silly resolved     dist:
+572 silly resolved      { shasum: '0c539f09291e8ffadde0c8a25850fb2cedc7022d',
+572 silly resolved        tarball: 'http://registry.npmjs.org/on-finished/-/on-finished-2.1.0.tgz' },
+572 silly resolved     directories: {},
+572 silly resolved     _resolved: 'https://registry.npmjs.org/on-finished/-/on-finished-2.1.0.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'raw-body',
+572 silly resolved     description: 'Get and validate the raw body of a readable stream.',
+572 silly resolved     version: '1.3.0',
+572 silly resolved     author:
+572 silly resolved      { name: 'Jonathan Ong',
+572 silly resolved        email: 'me@jongleberry.com',
+572 silly resolved        url: 'http://jongleberry.com' },
+572 silly resolved     contributors: [ [Object], [Object] ],
+572 silly resolved     license: 'MIT',
+572 silly resolved     repository: { type: 'git', url: 'git://github.com/stream-utils/raw-body' },
+572 silly resolved     dependencies: { bytes: '1', 'iconv-lite': '0.4.4' },
+572 silly resolved     devDependencies:
+572 silly resolved      { istanbul: '0.3.0',
+572 silly resolved        mocha: '~1.20.1',
+572 silly resolved        'readable-stream': '~1.0.17',
+572 silly resolved        through2: '~0.5.1' },
+572 silly resolved     engines: { node: '>= 0.8.0' },
+572 silly resolved     scripts:
+572 silly resolved      { test: 'mocha --reporter spec --bail test/',
+572 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/',
+572 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/' },
+572 silly resolved     bugs: { url: 'https://github.com/stream-utils/raw-body/issues' },
+572 silly resolved     homepage: 'https://github.com/stream-utils/raw-body',
+572 silly resolved     _id: 'raw-body@1.3.0',
+572 silly resolved     dist:
+572 silly resolved      { shasum: '978230a156a5548f42eef14de22d0f4f610083d1',
+572 silly resolved        tarball: 'http://registry.npmjs.org/raw-body/-/raw-body-1.3.0.tgz' },
+572 silly resolved     _from: 'raw-body@1.3.0',
+572 silly resolved     _npmVersion: '1.4.3',
+572 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+572 silly resolved     maintainers: [ [Object], [Object] ],
+572 silly resolved     directories: {},
+572 silly resolved     _shasum: '978230a156a5548f42eef14de22d0f4f610083d1',
+572 silly resolved     _resolved: 'https://registry.npmjs.org/raw-body/-/raw-body-1.3.0.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' },
+572 silly resolved   { name: 'type-is',
+572 silly resolved     description: 'Infer the content-type of a request.',
+572 silly resolved     version: '1.5.0',
+572 silly resolved     author:
+572 silly resolved      { name: 'Jonathan Ong',
+572 silly resolved        email: 'me@jongleberry.com',
+572 silly resolved        url: 'http://jongleberry.com' },
+572 silly resolved     contributors: [ [Object] ],
+572 silly resolved     license: 'MIT',
+572 silly resolved     repository: { type: 'git', url: 'https://github.com/jshttp/type-is' },
+572 silly resolved     dependencies: { 'media-typer': '0.2.0', 'mime-types': '~2.0.0' },
+572 silly resolved     devDependencies: { istanbul: '~0.3.0', mocha: '1', should: '4' },
+572 silly resolved     engines: { node: '>= 0.8' },
+572 silly resolved     files: [ 'LICENSE', 'HISTORY.md', 'index.js' ],
+572 silly resolved     scripts:
+572 silly resolved      { test: 'mocha --require should --reporter spec --check-leaks --bail test/',
+572 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+572 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+572 silly resolved     keywords: [ 'content', 'type', 'checking' ],
+572 silly resolved     gitHead: '1cff718285478905d97bbf6cf666e0ce1c0284e3',
+572 silly resolved     bugs: { url: 'https://github.com/jshttp/type-is/issues' },
+572 silly resolved     homepage: 'https://github.com/jshttp/type-is',
+572 silly resolved     _id: 'type-is@1.5.0',
+572 silly resolved     _shasum: 'e3539711529c5ee4e7cd9f5bed27487cb819f823',
+572 silly resolved     _from: 'type-is@~1.5.0',
+572 silly resolved     _npmVersion: '1.4.21',
+572 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+572 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+572 silly resolved     dist:
+572 silly resolved      { shasum: 'e3539711529c5ee4e7cd9f5bed27487cb819f823',
+572 silly resolved        tarball: 'http://registry.npmjs.org/type-is/-/type-is-1.5.0.tgz' },
+572 silly resolved     directories: {},
+572 silly resolved     _resolved: 'https://registry.npmjs.org/type-is/-/type-is-1.5.0.tgz',
+572 silly resolved     readme: 'ERROR: No README data found!' } ]
+573 info install bytes@1.0.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+574 info install depd@0.4.4 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+575 info install iconv-lite@0.4.4 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+576 info install media-typer@0.2.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+577 info install on-finished@2.1.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+578 info install raw-body@1.3.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+579 info install type-is@1.5.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+580 info installOne bytes@1.0.0
+581 info installOne depd@0.4.4
+582 info installOne iconv-lite@0.4.4
+583 info installOne media-typer@0.2.0
+584 info installOne on-finished@2.1.0
+585 info installOne raw-body@1.3.0
+586 info installOne type-is@1.5.0
+587 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes unbuild
+588 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd unbuild
+589 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite unbuild
+590 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer unbuild
+591 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished unbuild
+592 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body unbuild
+593 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is unbuild
+594 silly addNameRange number 2 { name: 'websocket-driver', range: '>=0.3.1', hasData: true }
+595 silly addNameRange versions [ 'websocket-driver',
+595 silly addNameRange   [ '0.1.0',
+595 silly addNameRange     '0.2.0',
+595 silly addNameRange     '0.2.1',
+595 silly addNameRange     '0.2.2',
+595 silly addNameRange     '0.3.0',
+595 silly addNameRange     '0.3.1',
+595 silly addNameRange     '0.3.2',
+595 silly addNameRange     '0.3.3',
+595 silly addNameRange     '0.3.4',
+595 silly addNameRange     '0.3.5' ] ]
+596 verbose addNamed [ 'websocket-driver', '0.3.5' ]
+597 verbose addNamed [ '0.3.5', '0.3.5' ]
+598 silly lockFile c8d61966-websocket-driver-0-3-5 websocket-driver@0.3.5
+599 verbose lock websocket-driver@0.3.5 /Users/edwincaro/.npm/c8d61966-websocket-driver-0-3-5.lock
+600 verbose tar unpack /Users/edwincaro/.npm/bytes/1.0.0/package.tgz
+601 silly lockFile 30f300ec-s-body-parser-node-modules-bytes tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes
+602 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes /Users/edwincaro/.npm/30f300ec-s-body-parser-node-modules-bytes.lock
+603 silly lockFile 94032f43-caro-npm-bytes-1-0-0-package-tgz tar:///Users/edwincaro/.npm/bytes/1.0.0/package.tgz
+604 verbose lock tar:///Users/edwincaro/.npm/bytes/1.0.0/package.tgz /Users/edwincaro/.npm/94032f43-caro-npm-bytes-1-0-0-package-tgz.lock
+605 verbose tar unpack /Users/edwincaro/.npm/depd/0.4.4/package.tgz
+606 silly lockFile 3fbd3ed5-es-body-parser-node-modules-depd tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd
+607 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd /Users/edwincaro/.npm/3fbd3ed5-es-body-parser-node-modules-depd.lock
+608 silly lockFile 3cfd107d-ncaro-npm-depd-0-4-4-package-tgz tar:///Users/edwincaro/.npm/depd/0.4.4/package.tgz
+609 verbose lock tar:///Users/edwincaro/.npm/depd/0.4.4/package.tgz /Users/edwincaro/.npm/3cfd107d-ncaro-npm-depd-0-4-4-package-tgz.lock
+610 verbose tar unpack /Users/edwincaro/.npm/iconv-lite/0.4.4/package.tgz
+611 silly lockFile 0e10f662-y-parser-node-modules-iconv-lite tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite
+612 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite /Users/edwincaro/.npm/0e10f662-y-parser-node-modules-iconv-lite.lock
+613 silly lockFile 1791821b-npm-iconv-lite-0-4-4-package-tgz tar:///Users/edwincaro/.npm/iconv-lite/0.4.4/package.tgz
+614 verbose lock tar:///Users/edwincaro/.npm/iconv-lite/0.4.4/package.tgz /Users/edwincaro/.npm/1791821b-npm-iconv-lite-0-4-4-package-tgz.lock
+615 verbose tar unpack /Users/edwincaro/.npm/media-typer/0.2.0/package.tgz
+616 silly lockFile a1cddfe5--parser-node-modules-media-typer tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer
+617 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer /Users/edwincaro/.npm/a1cddfe5--parser-node-modules-media-typer.lock
+618 silly lockFile 22b345c6-pm-media-typer-0-2-0-package-tgz tar:///Users/edwincaro/.npm/media-typer/0.2.0/package.tgz
+619 verbose lock tar:///Users/edwincaro/.npm/media-typer/0.2.0/package.tgz /Users/edwincaro/.npm/22b345c6-pm-media-typer-0-2-0-package-tgz.lock
+620 verbose tar unpack /Users/edwincaro/.npm/on-finished/2.1.0/package.tgz
+621 silly lockFile 135aac37--parser-node-modules-on-finished tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+622 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished /Users/edwincaro/.npm/135aac37--parser-node-modules-on-finished.lock
+623 silly lockFile 2f97ee0a-pm-on-finished-2-1-0-package-tgz tar:///Users/edwincaro/.npm/on-finished/2.1.0/package.tgz
+624 verbose lock tar:///Users/edwincaro/.npm/on-finished/2.1.0/package.tgz /Users/edwincaro/.npm/2f97ee0a-pm-on-finished-2-1-0-package-tgz.lock
+625 verbose tar unpack /Users/edwincaro/.npm/raw-body/1.3.0/package.tgz
+626 silly lockFile 4075cf9a-ody-parser-node-modules-raw-body tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body
+627 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body /Users/edwincaro/.npm/4075cf9a-ody-parser-node-modules-raw-body.lock
+628 silly lockFile 2fcd677f-o-npm-raw-body-1-3-0-package-tgz tar:///Users/edwincaro/.npm/raw-body/1.3.0/package.tgz
+629 verbose lock tar:///Users/edwincaro/.npm/raw-body/1.3.0/package.tgz /Users/edwincaro/.npm/2fcd677f-o-npm-raw-body-1-3-0-package-tgz.lock
+630 verbose tar unpack /Users/edwincaro/.npm/type-is/1.5.0/package.tgz
+631 silly lockFile c9b1d84f-body-parser-node-modules-type-is tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+632 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is /Users/edwincaro/.npm/c9b1d84f-body-parser-node-modules-type-is.lock
+633 silly lockFile 73144ec8-ro-npm-type-is-1-5-0-package-tgz tar:///Users/edwincaro/.npm/type-is/1.5.0/package.tgz
+634 verbose lock tar:///Users/edwincaro/.npm/type-is/1.5.0/package.tgz /Users/edwincaro/.npm/73144ec8-ro-npm-type-is-1-5-0-package-tgz.lock
+635 silly gunzTarPerm modes [ '755', '644' ]
+636 silly gunzTarPerm modes [ '755', '644' ]
+637 silly gunzTarPerm modes [ '755', '644' ]
+638 silly gunzTarPerm modes [ '755', '644' ]
+639 silly gunzTarPerm modes [ '755', '644' ]
+640 silly gunzTarPerm modes [ '755', '644' ]
+641 silly gunzTarPerm modes [ '755', '644' ]
+642 silly lockFile c8d61966-websocket-driver-0-3-5 websocket-driver@0.3.5
+643 silly lockFile c8d61966-websocket-driver-0-3-5 websocket-driver@0.3.5
+644 silly lockFile 27116e03-websocket-driver-0-3-1 websocket-driver@>=0.3.1
+645 silly lockFile 27116e03-websocket-driver-0-3-1 websocket-driver@>=0.3.1
+646 silly gunzTarPerm extractEntry package.json
+647 silly gunzTarPerm extractEntry package.json
+648 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+649 silly gunzTarPerm extractEntry package.json
+650 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+651 silly gunzTarPerm extractEntry package.json
+652 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+653 silly gunzTarPerm extractEntry package.json
+654 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+655 silly gunzTarPerm extractEntry package.json
+656 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+657 silly gunzTarPerm extractEntry package.json
+658 silly gunzTarPerm extractEntry .npmignore
+659 silly gunzTarPerm extractEntry index.js
+660 silly gunzTarPerm extractEntry .npmignore
+661 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+662 silly gunzTarPerm extractEntry LICENSE
+663 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+664 silly gunzTarPerm extractEntry .npmignore
+665 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+666 silly gunzTarPerm extractEntry README.md
+667 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+668 silly gunzTarPerm extractEntry README.md
+669 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+670 silly gunzTarPerm extractEntry LICENSE
+671 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+672 silly gunzTarPerm extractEntry .npmignore
+673 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+674 silly gunzTarPerm extractEntry README.md
+675 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+676 silly gunzTarPerm extractEntry README.md
+677 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+678 silly gunzTarPerm extractEntry LICENSE
+679 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+680 silly gunzTarPerm extractEntry .npmignore
+681 silly gunzTarPerm extractEntry README.md
+682 silly gunzTarPerm extractEntry History.md
+683 silly gunzTarPerm extractEntry Makefile
+684 silly gunzTarPerm extractEntry index.js
+685 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+686 silly gunzTarPerm extractEntry HISTORY.md
+687 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+688 silly gunzTarPerm extractEntry index.js
+689 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+690 silly gunzTarPerm extractEntry History.md
+691 silly gunzTarPerm modified mode [ 'History.md', 438, 420 ]
+692 silly gunzTarPerm extractEntry index.js
+693 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+694 silly gunzTarPerm extractEntry HISTORY.md
+695 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+696 silly resolved [ { name: 'websocket-driver',
+696 silly resolved     description: 'WebSocket protocol handler with pluggable I/O',
+696 silly resolved     homepage: 'http://github.com/faye/websocket-driver-node',
+696 silly resolved     author:
+696 silly resolved      { name: 'James Coglan',
+696 silly resolved        email: 'jcoglan@gmail.com',
+696 silly resolved        url: 'http://jcoglan.com/' },
+696 silly resolved     keywords: [ 'websocket' ],
+696 silly resolved     license: 'MIT',
+696 silly resolved     version: '0.3.5',
+696 silly resolved     engines: { node: '>=0.4.0' },
+696 silly resolved     main: './lib/websocket/driver',
+696 silly resolved     devDependencies: { jstest: '' },
+696 silly resolved     scripts: { test: 'jstest spec/runner.js' },
+696 silly resolved     repository:
+696 silly resolved      { type: 'git',
+696 silly resolved        url: 'git://github.com/faye/websocket-driver-node.git' },
+696 silly resolved     bugs: { url: 'http://github.com/faye/websocket-driver-node/issues' },
+696 silly resolved     gitHead: 'dbedb370b791a6af9ca5dcb939123552cdd88990',
+696 silly resolved     _id: 'websocket-driver@0.3.5',
+696 silly resolved     _shasum: 'e3a51ff538f1653a49e62d78ecfc1eb1bde9e5a0',
+696 silly resolved     _from: 'websocket-driver@>=0.3.1',
+696 silly resolved     _npmVersion: '1.4.20',
+696 silly resolved     _npmUser: { name: 'jcoglan', email: 'jcoglan@gmail.com' },
+696 silly resolved     maintainers: [ [Object] ],
+696 silly resolved     dist:
+696 silly resolved      { shasum: 'e3a51ff538f1653a49e62d78ecfc1eb1bde9e5a0',
+696 silly resolved        tarball: 'http://registry.npmjs.org/websocket-driver/-/websocket-driver-0.3.5.tgz' },
+696 silly resolved     directories: {},
+696 silly resolved     _resolved: 'https://registry.npmjs.org/websocket-driver/-/websocket-driver-0.3.5.tgz',
+696 silly resolved     readme: 'ERROR: No README data found!' } ]
+697 info install websocket-driver@0.3.5 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+698 info installOne websocket-driver@0.3.5
+699 silly gunzTarPerm extractEntry index.js
+700 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+701 silly gunzTarPerm extractEntry HISTORY.md
+702 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+703 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver unbuild
+704 silly gunzTarPerm extractEntry index.js
+705 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+706 silly gunzTarPerm extractEntry HISTORY.md
+707 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 420 ]
+708 silly gunzTarPerm extractEntry LICENSE
+709 silly gunzTarPerm extractEntry .travis.yml
+710 verbose tar unpack /Users/edwincaro/.npm/websocket-driver/0.3.5/package.tgz
+711 silly lockFile ffabaf35-et-node-modules-websocket-driver tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver
+712 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver /Users/edwincaro/.npm/ffabaf35-et-node-modules-websocket-driver.lock
+713 silly lockFile 34dde32d-bsocket-driver-0-3-5-package-tgz tar:///Users/edwincaro/.npm/websocket-driver/0.3.5/package.tgz
+714 verbose lock tar:///Users/edwincaro/.npm/websocket-driver/0.3.5/package.tgz /Users/edwincaro/.npm/34dde32d-bsocket-driver-0-3-5-package-tgz.lock
+715 silly gunzTarPerm extractEntry Readme.md
+716 silly gunzTarPerm extractEntry component.json
+717 silly gunzTarPerm modes [ '755', '644' ]
+718 silly gunzTarPerm extractEntry Readme.md
+719 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
+720 silly gunzTarPerm extractEntry package.json
+721 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+722 silly gunzTarPerm extractEntry Changelog.md
+723 silly gunzTarPerm extractEntry README.md~
+724 silly gunzTarPerm extractEntry README.md
+725 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+726 silly gunzTarPerm extractEntry CHANGELOG.md
+727 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+728 silly gunzTarPerm extractEntry examples/tcp_server.js
+729 silly gunzTarPerm modified mode [ 'examples/tcp_server.js', 436, 420 ]
+730 silly gunzTarPerm extractEntry lib/websocket/driver.js
+731 silly gunzTarPerm modified mode [ 'lib/websocket/driver.js', 436, 420 ]
+732 silly gunzTarPerm extractEntry lib/websocket/streams.js
+733 silly gunzTarPerm modified mode [ 'lib/websocket/streams.js', 436, 420 ]
+734 silly gunzTarPerm extractEntry lib/websocket/driver/base.js
+735 silly gunzTarPerm modified mode [ 'lib/websocket/driver/base.js', 436, 420 ]
+736 silly gunzTarPerm extractEntry lib/websocket/driver/client.js
+737 silly gunzTarPerm modified mode [ 'lib/websocket/driver/client.js', 436, 420 ]
+738 silly gunzTarPerm extractEntry lib/websocket/driver/draft75.js
+739 silly gunzTarPerm modified mode [ 'lib/websocket/driver/draft75.js', 436, 420 ]
+740 silly gunzTarPerm extractEntry lib/websocket/driver/draft76.js
+741 silly gunzTarPerm modified mode [ 'lib/websocket/driver/draft76.js', 436, 420 ]
+742 silly gunzTarPerm extractEntry lib/websocket/driver/headers.js
+743 silly gunzTarPerm modified mode [ 'lib/websocket/driver/headers.js', 436, 420 ]
+744 silly gunzTarPerm extractEntry lib/websocket/driver/http_parser.js
+745 silly gunzTarPerm modified mode [ 'lib/websocket/driver/http_parser.js', 436, 420 ]
+746 silly gunzTarPerm extractEntry lib/websocket/driver/hybi.js
+747 silly gunzTarPerm modified mode [ 'lib/websocket/driver/hybi.js', 436, 420 ]
+748 silly gunzTarPerm extractEntry lib/websocket/driver/server.js
+749 silly gunzTarPerm modified mode [ 'lib/websocket/driver/server.js', 436, 420 ]
+750 silly gunzTarPerm extractEntry lib/websocket/driver/hybi/stream_reader.js
+751 silly gunzTarPerm modified mode [ 'lib/websocket/driver/hybi/stream_reader.js', 436, 420 ]
+752 silly gunzTarPerm extractEntry encodings/dbcs-codec.js
+753 silly gunzTarPerm extractEntry encodings/dbcs-data.js
+754 silly gunzTarPerm extractEntry encodings/index.js
+755 silly gunzTarPerm extractEntry encodings/internal.js
+756 silly gunzTarPerm extractEntry encodings/sbcs-codec.js
+757 silly gunzTarPerm extractEntry encodings/sbcs-data-generated.js
+758 silly lockFile 135aac37--parser-node-modules-on-finished tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+759 silly lockFile 135aac37--parser-node-modules-on-finished tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+760 silly lockFile 2f97ee0a-pm-on-finished-2-1-0-package-tgz tar:///Users/edwincaro/.npm/on-finished/2.1.0/package.tgz
+761 silly lockFile 2f97ee0a-pm-on-finished-2-1-0-package-tgz tar:///Users/edwincaro/.npm/on-finished/2.1.0/package.tgz
+762 info preinstall on-finished@2.1.0
+763 verbose readDependencies using package.json deps
+764 silly lockFile 4075cf9a-ody-parser-node-modules-raw-body tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body
+765 silly lockFile 4075cf9a-ody-parser-node-modules-raw-body tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body
+766 verbose readDependencies using package.json deps
+767 silly lockFile 2fcd677f-o-npm-raw-body-1-3-0-package-tgz tar:///Users/edwincaro/.npm/raw-body/1.3.0/package.tgz
+768 silly lockFile 2fcd677f-o-npm-raw-body-1-3-0-package-tgz tar:///Users/edwincaro/.npm/raw-body/1.3.0/package.tgz
+769 silly lockFile a1cddfe5--parser-node-modules-media-typer tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer
+770 silly lockFile a1cddfe5--parser-node-modules-media-typer tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer
+771 verbose cache add [ 'ee-first@1.0.5', null ]
+772 verbose cache add name=undefined spec="ee-first@1.0.5" args=["ee-first@1.0.5",null]
+773 verbose parsed url { protocol: null,
+773 verbose parsed url   slashes: null,
+773 verbose parsed url   auth: null,
+773 verbose parsed url   host: null,
+773 verbose parsed url   port: null,
+773 verbose parsed url   hostname: null,
+773 verbose parsed url   hash: null,
+773 verbose parsed url   search: null,
+773 verbose parsed url   query: null,
+773 verbose parsed url   pathname: 'ee-first@1.0.5',
+773 verbose parsed url   path: 'ee-first@1.0.5',
+773 verbose parsed url   href: 'ee-first@1.0.5' }
+774 silly gunzTarPerm extractEntry encodings/sbcs-data.js
+775 silly gunzTarPerm extractEntry encodings/utf16.js
+776 silly lockFile 22b345c6-pm-media-typer-0-2-0-package-tgz tar:///Users/edwincaro/.npm/media-typer/0.2.0/package.tgz
+777 silly lockFile 22b345c6-pm-media-typer-0-2-0-package-tgz tar:///Users/edwincaro/.npm/media-typer/0.2.0/package.tgz
+778 verbose cache add name="ee-first" spec="1.0.5" args=["ee-first","1.0.5"]
+779 verbose parsed url { protocol: null,
+779 verbose parsed url   slashes: null,
+779 verbose parsed url   auth: null,
+779 verbose parsed url   host: null,
+779 verbose parsed url   port: null,
+779 verbose parsed url   hostname: null,
+779 verbose parsed url   hash: null,
+779 verbose parsed url   search: null,
+779 verbose parsed url   query: null,
+779 verbose parsed url   pathname: '1.0.5',
+779 verbose parsed url   path: '1.0.5',
+779 verbose parsed url   href: '1.0.5' }
+780 verbose addNamed [ 'ee-first', '1.0.5' ]
+781 verbose addNamed [ '1.0.5', '1.0.5' ]
+782 silly lockFile 2d236fca-ee-first-1-0-5 ee-first@1.0.5
+783 verbose lock ee-first@1.0.5 /Users/edwincaro/.npm/2d236fca-ee-first-1-0-5.lock
+784 silly lockFile 30f300ec-s-body-parser-node-modules-bytes tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes
+785 silly lockFile 30f300ec-s-body-parser-node-modules-bytes tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes
+786 silly lockFile 94032f43-caro-npm-bytes-1-0-0-package-tgz tar:///Users/edwincaro/.npm/bytes/1.0.0/package.tgz
+787 silly lockFile 94032f43-caro-npm-bytes-1-0-0-package-tgz tar:///Users/edwincaro/.npm/bytes/1.0.0/package.tgz
+788 verbose url raw ee-first
+789 verbose url resolving [ 'https://registry.npmjs.org/', './ee-first' ]
+790 verbose url resolved https://registry.npmjs.org/ee-first
+791 info trying registry request attempt 1 at 11:03:00
+792 verbose etag "4IZ96PV7GQFVTQ1RVUN7NC5M8"
+793 http GET https://registry.npmjs.org/ee-first
+794 silly lockFile c9b1d84f-body-parser-node-modules-type-is tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+795 silly lockFile c9b1d84f-body-parser-node-modules-type-is tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+796 info preinstall raw-body@1.3.0
+797 silly lockFile 73144ec8-ro-npm-type-is-1-5-0-package-tgz tar:///Users/edwincaro/.npm/type-is/1.5.0/package.tgz
+798 silly lockFile 73144ec8-ro-npm-type-is-1-5-0-package-tgz tar:///Users/edwincaro/.npm/type-is/1.5.0/package.tgz
+799 info preinstall media-typer@0.2.0
+800 verbose readDependencies using package.json deps
+801 verbose readDependencies using package.json deps
+802 verbose readDependencies using package.json deps
+803 silly resolved []
+804 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body
+805 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/raw-body
+806 verbose linkStuff [ false,
+806 verbose linkStuff   false,
+806 verbose linkStuff   false,
+806 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+807 info linkStuff raw-body@1.3.0
+808 verbose linkBins raw-body@1.3.0
+809 verbose linkMans raw-body@1.3.0
+810 verbose rebuildBundles raw-body@1.3.0
+811 verbose readDependencies using package.json deps
+812 silly resolved []
+813 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer
+814 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/media-typer
+815 verbose linkStuff [ false,
+815 verbose linkStuff   false,
+815 verbose linkStuff   false,
+815 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+816 info linkStuff media-typer@0.2.0
+817 verbose linkBins media-typer@0.2.0
+818 verbose linkMans media-typer@0.2.0
+819 verbose rebuildBundles media-typer@0.2.0
+820 info install raw-body@1.3.0
+821 info install media-typer@0.2.0
+822 silly gunzTarPerm extractEntry encodings/utf7.js
+823 silly gunzTarPerm extractEntry encodings/tables/big5-added.json
+824 info preinstall bytes@1.0.0
+825 info postinstall raw-body@1.3.0
+826 info postinstall media-typer@0.2.0
+827 info preinstall type-is@1.5.0
+828 verbose readDependencies using package.json deps
+829 verbose readDependencies using package.json deps
+830 silly resolved []
+831 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes
+832 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/bytes
+833 verbose linkStuff [ false,
+833 verbose linkStuff   false,
+833 verbose linkStuff   false,
+833 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+834 info linkStuff bytes@1.0.0
+835 verbose linkBins bytes@1.0.0
+836 verbose linkMans bytes@1.0.0
+837 verbose rebuildBundles bytes@1.0.0
+838 info install bytes@1.0.0
+839 verbose readDependencies using package.json deps
+840 verbose readDependencies using package.json deps
+841 info postinstall bytes@1.0.0
+842 verbose cache add [ 'mime-types@~2.0.0', null ]
+843 verbose cache add name=undefined spec="mime-types@~2.0.0" args=["mime-types@~2.0.0",null]
+844 verbose parsed url { protocol: null,
+844 verbose parsed url   slashes: null,
+844 verbose parsed url   auth: null,
+844 verbose parsed url   host: null,
+844 verbose parsed url   port: null,
+844 verbose parsed url   hostname: null,
+844 verbose parsed url   hash: null,
+844 verbose parsed url   search: null,
+844 verbose parsed url   query: null,
+844 verbose parsed url   pathname: 'mime-types@~2.0.0',
+844 verbose parsed url   path: 'mime-types@~2.0.0',
+844 verbose parsed url   href: 'mime-types@~2.0.0' }
+845 verbose cache add name="mime-types" spec="~2.0.0" args=["mime-types","~2.0.0"]
+846 verbose parsed url { protocol: null,
+846 verbose parsed url   slashes: null,
+846 verbose parsed url   auth: null,
+846 verbose parsed url   host: null,
+846 verbose parsed url   port: null,
+846 verbose parsed url   hostname: null,
+846 verbose parsed url   hash: null,
+846 verbose parsed url   search: null,
+846 verbose parsed url   query: null,
+846 verbose parsed url   pathname: '~2.0.0',
+846 verbose parsed url   path: '~2.0.0',
+846 verbose parsed url   href: '~2.0.0' }
+847 verbose addNamed [ 'mime-types', '~2.0.0' ]
+848 verbose addNamed [ null, '>=2.0.0-0 <2.1.0-0' ]
+849 silly lockFile e3e69413-mime-types-2-0-0 mime-types@~2.0.0
+850 verbose lock mime-types@~2.0.0 /Users/edwincaro/.npm/e3e69413-mime-types-2-0-0.lock
+851 silly addNameRange { name: 'mime-types',
+851 silly addNameRange   range: '>=2.0.0-0 <2.1.0-0',
+851 silly addNameRange   hasData: false }
+852 silly lockFile 3fbd3ed5-es-body-parser-node-modules-depd tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd
+853 silly lockFile 3fbd3ed5-es-body-parser-node-modules-depd tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd
+854 verbose url raw mime-types
+855 verbose url resolving [ 'https://registry.npmjs.org/', './mime-types' ]
+856 verbose url resolved https://registry.npmjs.org/mime-types
+857 info trying registry request attempt 1 at 11:03:00
+858 verbose etag "BTSK6MX4BPAJDNG6TARZ11BP"
+859 http GET https://registry.npmjs.org/mime-types
+860 silly lockFile 3cfd107d-ncaro-npm-depd-0-4-4-package-tgz tar:///Users/edwincaro/.npm/depd/0.4.4/package.tgz
+861 silly lockFile 3cfd107d-ncaro-npm-depd-0-4-4-package-tgz tar:///Users/edwincaro/.npm/depd/0.4.4/package.tgz
+862 info preinstall depd@0.4.4
+863 verbose readDependencies using package.json deps
+864 verbose readDependencies using package.json deps
+865 silly resolved []
+866 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd
+867 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/depd
+868 verbose linkStuff [ false,
+868 verbose linkStuff   false,
+868 verbose linkStuff   false,
+868 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+869 info linkStuff depd@0.4.4
+870 verbose linkBins depd@0.4.4
+871 verbose linkMans depd@0.4.4
+872 verbose rebuildBundles depd@0.4.4
+873 info install depd@0.4.4
+874 info postinstall depd@0.4.4
+875 silly gunzTarPerm extractEntry encodings/tables/cp936.json
+876 silly gunzTarPerm extractEntry encodings/tables/cp949.json
+877 silly gunzTarPerm extractEntry encodings/tables/cp950.json
+878 silly gunzTarPerm extractEntry encodings/tables/eucjp.json
+879 silly gunzTarPerm extractEntry encodings/tables/gb18030-ranges.json
+880 silly gunzTarPerm extractEntry encodings/tables/gbk-added.json
+881 silly gunzTarPerm extractEntry encodings/tables/shiftjis.json
+882 silly gunzTarPerm extractEntry lib/extend-node.js
+883 silly gunzTarPerm extractEntry lib/index.js
+884 silly gunzTarPerm extractEntry lib/streams.js
+885 silly lockFile ffabaf35-et-node-modules-websocket-driver tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver
+886 silly lockFile ffabaf35-et-node-modules-websocket-driver tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver
+887 silly lockFile 34dde32d-bsocket-driver-0-3-5-package-tgz tar:///Users/edwincaro/.npm/websocket-driver/0.3.5/package.tgz
+888 silly lockFile 34dde32d-bsocket-driver-0-3-5-package-tgz tar:///Users/edwincaro/.npm/websocket-driver/0.3.5/package.tgz
+889 info preinstall websocket-driver@0.3.5
+890 verbose readDependencies using package.json deps
+891 verbose readDependencies using package.json deps
+892 silly resolved []
+893 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver
+894 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules/websocket-driver
+895 verbose linkStuff [ false,
+895 verbose linkStuff   false,
+895 verbose linkStuff   false,
+895 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket/node_modules' ]
+896 info linkStuff websocket-driver@0.3.5
+897 verbose linkBins websocket-driver@0.3.5
+898 verbose linkMans websocket-driver@0.3.5
+899 verbose rebuildBundles websocket-driver@0.3.5
+900 info install websocket-driver@0.3.5
+901 info postinstall websocket-driver@0.3.5
+902 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+903 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/faye-websocket
+904 verbose linkStuff [ false,
+904 verbose linkStuff   false,
+904 verbose linkStuff   false,
+904 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules' ]
+905 info linkStuff faye-websocket@0.7.2
+906 verbose linkBins faye-websocket@0.7.2
+907 verbose linkMans faye-websocket@0.7.2
+908 verbose rebuildBundles faye-websocket@0.7.2
+909 verbose rebuildBundles [ 'websocket-driver' ]
+910 info install faye-websocket@0.7.2
+911 info postinstall faye-websocket@0.7.2
+912 http 304 https://registry.npmjs.org/ee-first
+913 silly registry.get cb [ 304,
+913 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+913 silly registry.get     server: 'Apache',
+913 silly registry.get     via: '1.1 varnish',
+913 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:44:48 GMT',
+913 silly registry.get     'cache-control': 'max-age=60',
+913 silly registry.get     etag: '"4IZ96PV7GQFVTQ1RVUN7NC5M8"',
+913 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+913 silly registry.get     'x-cache': 'HIT',
+913 silly registry.get     'x-cache-hits': '9',
+913 silly registry.get     'x-timer': 'S1410105389.560665,VS0,VE0',
+913 silly registry.get     vary: 'Accept',
+913 silly registry.get     'content-length': '0',
+913 silly registry.get     'keep-alive': 'timeout=10, max=50',
+913 silly registry.get     connection: 'Keep-Alive' } ]
+914 verbose etag ee-first from cache
+915 silly lockFile 2d236fca-ee-first-1-0-5 ee-first@1.0.5
+916 silly lockFile 2d236fca-ee-first-1-0-5 ee-first@1.0.5
+917 http 304 https://registry.npmjs.org/mime-types
+918 silly registry.get cb [ 304,
+918 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+918 silly registry.get     server: 'Apache',
+918 silly registry.get     via: '1.1 varnish',
+918 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:29 GMT',
+918 silly registry.get     'cache-control': 'max-age=60',
+918 silly registry.get     etag: '"BTSK6MX4BPAJDNG6TARZ11BP"',
+918 silly registry.get     'x-served-by': 'cache-ord1727-ORD',
+918 silly registry.get     'x-cache': 'HIT',
+918 silly registry.get     'x-cache-hits': '1',
+918 silly registry.get     'x-timer': 'S1410105389.586902,VS0,VE0',
+918 silly registry.get     vary: 'Accept',
+918 silly registry.get     'content-length': '0',
+918 silly registry.get     'keep-alive': 'timeout=10, max=50',
+918 silly registry.get     connection: 'Keep-Alive' } ]
+919 verbose etag mime-types from cache
+920 silly addNameRange number 2 { name: 'mime-types',
+920 silly addNameRange   range: '>=2.0.0-0 <2.1.0-0',
+920 silly addNameRange   hasData: true }
+921 silly addNameRange versions [ 'mime-types',
+921 silly addNameRange   [ '0.1.0', '1.0.0', '1.0.1', '1.0.2', '2.0.0' ] ]
+922 verbose addNamed [ 'mime-types', '2.0.0' ]
+923 verbose addNamed [ '2.0.0', '2.0.0' ]
+924 silly lockFile d99c65a9-mime-types-2-0-0 mime-types@2.0.0
+925 verbose lock mime-types@2.0.0 /Users/edwincaro/.npm/d99c65a9-mime-types-2-0-0.lock
+926 silly resolved [ { name: 'ee-first',
+926 silly resolved     description: 'return the first event in a set of ee/event pairs',
+926 silly resolved     version: '1.0.5',
+926 silly resolved     author:
+926 silly resolved      { name: 'Jonathan Ong',
+926 silly resolved        email: 'me@jongleberry.com',
+926 silly resolved        url: 'http://jongleberry.com' },
+926 silly resolved     contributors: [ [Object] ],
+926 silly resolved     license: 'MIT',
+926 silly resolved     repository: { type: 'git', url: 'https://github.com/jonathanong/ee-first' },
+926 silly resolved     devDependencies: { istanbul: '0.3.0', mocha: '1' },
+926 silly resolved     files: [ 'index.js', 'LICENSE' ],
+926 silly resolved     scripts:
+926 silly resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+926 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+926 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+926 silly resolved     gitHead: 'c9d9a6881863c0d2fcc2e4ac99a170088c205304',
+926 silly resolved     bugs: { url: 'https://github.com/jonathanong/ee-first/issues' },
+926 silly resolved     homepage: 'https://github.com/jonathanong/ee-first',
+926 silly resolved     _id: 'ee-first@1.0.5',
+926 silly resolved     _shasum: '8c9b212898d8cd9f1a9436650ce7be202c9e9ff0',
+926 silly resolved     _from: 'ee-first@1.0.5',
+926 silly resolved     _npmVersion: '1.4.21',
+926 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+926 silly resolved     maintainers: [ [Object], [Object] ],
+926 silly resolved     dist:
+926 silly resolved      { shasum: '8c9b212898d8cd9f1a9436650ce7be202c9e9ff0',
+926 silly resolved        tarball: 'http://registry.npmjs.org/ee-first/-/ee-first-1.0.5.tgz' },
+926 silly resolved     directories: {},
+926 silly resolved     _resolved: 'https://registry.npmjs.org/ee-first/-/ee-first-1.0.5.tgz',
+926 silly resolved     readme: 'ERROR: No README data found!' } ]
+927 info install ee-first@1.0.5 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+928 info installOne ee-first@1.0.5
+929 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first unbuild
+930 verbose tar unpack /Users/edwincaro/.npm/ee-first/1.0.5/package.tgz
+931 silly lockFile d749d7a9-n-finished-node-modules-ee-first tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+932 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first /Users/edwincaro/.npm/d749d7a9-n-finished-node-modules-ee-first.lock
+933 silly lockFile ccfec840-o-npm-ee-first-1-0-5-package-tgz tar:///Users/edwincaro/.npm/ee-first/1.0.5/package.tgz
+934 verbose lock tar:///Users/edwincaro/.npm/ee-first/1.0.5/package.tgz /Users/edwincaro/.npm/ccfec840-o-npm-ee-first-1-0-5-package-tgz.lock
+935 silly lockFile d99c65a9-mime-types-2-0-0 mime-types@2.0.0
+936 silly lockFile d99c65a9-mime-types-2-0-0 mime-types@2.0.0
+937 silly lockFile e3e69413-mime-types-2-0-0 mime-types@~2.0.0
+938 silly lockFile e3e69413-mime-types-2-0-0 mime-types@~2.0.0
+939 silly gunzTarPerm modes [ '755', '644' ]
+940 silly gunzTarPerm extractEntry package.json
+941 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+942 silly gunzTarPerm extractEntry README.md
+943 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+944 silly gunzTarPerm extractEntry LICENSE
+945 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+946 silly gunzTarPerm extractEntry index.js
+947 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+948 silly resolved [ { name: 'mime-types',
+948 silly resolved     description: 'The ultimate javascript content-type utility.',
+948 silly resolved     version: '2.0.0',
+948 silly resolved     author:
+948 silly resolved      { name: 'Jonathan Ong',
+948 silly resolved        email: 'me@jongleberry.com',
+948 silly resolved        url: 'http://jongleberry.com' },
+948 silly resolved     contributors: [ [Object] ],
+948 silly resolved     repository: { type: 'git', url: 'https://github.com/jshttp/mime-types' },
+948 silly resolved     license: 'MIT',
+948 silly resolved     dependencies: { 'mime-db': '~1.0.1' },
+948 silly resolved     devDependencies: { istanbul: '0', mocha: '1', should: '3' },
+948 silly resolved     engines: { node: '>= 0.8.0' },
+948 silly resolved     scripts:
+948 silly resolved      { test: 'mocha --reporter spec --require should test/test.js',
+948 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --require should test/test.js',
+948 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --require should test/test.js' },
+948 silly resolved     files: [ 'index.js' ],
+948 silly resolved     keywords: [ 'mime', 'types' ],
+948 silly resolved     gitHead: 'c5a3c150ab62deeb61da5bd0b6265115b1b35f27',
+948 silly resolved     bugs: { url: 'https://github.com/jshttp/mime-types/issues' },
+948 silly resolved     homepage: 'https://github.com/jshttp/mime-types',
+948 silly resolved     _id: 'mime-types@2.0.0',
+948 silly resolved     _shasum: '4a85688446a4d94a03909e0ae292766744a3c313',
+948 silly resolved     _from: 'mime-types@~2.0.0',
+948 silly resolved     _npmVersion: '1.4.21',
+948 silly resolved     _npmUser: { name: 'jongleberry', email: 'jonathanrichardong@gmail.com' },
+948 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+948 silly resolved     dist:
+948 silly resolved      { shasum: '4a85688446a4d94a03909e0ae292766744a3c313',
+948 silly resolved        tarball: 'http://registry.npmjs.org/mime-types/-/mime-types-2.0.0.tgz' },
+948 silly resolved     directories: {},
+948 silly resolved     _resolved: 'https://registry.npmjs.org/mime-types/-/mime-types-2.0.0.tgz',
+948 silly resolved     readme: 'ERROR: No README data found!' } ]
+949 info install mime-types@2.0.0 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+950 info installOne mime-types@2.0.0
+951 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types unbuild
+952 verbose tar unpack /Users/edwincaro/.npm/mime-types/2.0.0/package.tgz
+953 silly lockFile 6e9e2f18--type-is-node-modules-mime-types tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+954 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types /Users/edwincaro/.npm/6e9e2f18--type-is-node-modules-mime-types.lock
+955 silly lockFile 225d0cbd-npm-mime-types-2-0-0-package-tgz tar:///Users/edwincaro/.npm/mime-types/2.0.0/package.tgz
+956 verbose lock tar:///Users/edwincaro/.npm/mime-types/2.0.0/package.tgz /Users/edwincaro/.npm/225d0cbd-npm-mime-types-2-0-0-package-tgz.lock
+957 silly gunzTarPerm modes [ '755', '644' ]
+958 silly gunzTarPerm extractEntry package.json
+959 silly gunzTarPerm extractEntry README.md
+960 silly gunzTarPerm extractEntry index.js
+961 silly lockFile 0e10f662-y-parser-node-modules-iconv-lite tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite
+962 silly lockFile 0e10f662-y-parser-node-modules-iconv-lite tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite
+963 silly lockFile 1791821b-npm-iconv-lite-0-4-4-package-tgz tar:///Users/edwincaro/.npm/iconv-lite/0.4.4/package.tgz
+964 silly lockFile 1791821b-npm-iconv-lite-0-4-4-package-tgz tar:///Users/edwincaro/.npm/iconv-lite/0.4.4/package.tgz
+965 silly lockFile d749d7a9-n-finished-node-modules-ee-first tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+966 silly lockFile d749d7a9-n-finished-node-modules-ee-first tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+967 silly lockFile ccfec840-o-npm-ee-first-1-0-5-package-tgz tar:///Users/edwincaro/.npm/ee-first/1.0.5/package.tgz
+968 silly lockFile ccfec840-o-npm-ee-first-1-0-5-package-tgz tar:///Users/edwincaro/.npm/ee-first/1.0.5/package.tgz
+969 info preinstall iconv-lite@0.4.4
+970 verbose readDependencies using package.json deps
+971 verbose readDependencies using package.json deps
+972 silly resolved []
+973 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite
+974 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/iconv-lite
+975 verbose linkStuff [ false,
+975 verbose linkStuff   false,
+975 verbose linkStuff   false,
+975 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+976 info linkStuff iconv-lite@0.4.4
+977 verbose linkBins iconv-lite@0.4.4
+978 verbose linkMans iconv-lite@0.4.4
+979 verbose rebuildBundles iconv-lite@0.4.4
+980 info install iconv-lite@0.4.4
+981 info postinstall iconv-lite@0.4.4
+982 info preinstall ee-first@1.0.5
+983 verbose readDependencies using package.json deps
+984 verbose readDependencies using package.json deps
+985 silly resolved []
+986 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+987 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first
+988 verbose linkStuff [ false,
+988 verbose linkStuff   false,
+988 verbose linkStuff   false,
+988 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished/node_modules' ]
+989 info linkStuff ee-first@1.0.5
+990 verbose linkBins ee-first@1.0.5
+991 verbose linkMans ee-first@1.0.5
+992 verbose rebuildBundles ee-first@1.0.5
+993 info install ee-first@1.0.5
+994 info postinstall ee-first@1.0.5
+995 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+996 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/on-finished
+997 verbose linkStuff [ false,
+997 verbose linkStuff   false,
+997 verbose linkStuff   false,
+997 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+998 info linkStuff on-finished@2.1.0
+999 verbose linkBins on-finished@2.1.0
+1000 verbose linkMans on-finished@2.1.0
+1001 verbose rebuildBundles on-finished@2.1.0
+1002 verbose rebuildBundles [ 'ee-first' ]
+1003 info install on-finished@2.1.0
+1004 info postinstall on-finished@2.1.0
+1005 silly lockFile 6e9e2f18--type-is-node-modules-mime-types tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+1006 silly lockFile 6e9e2f18--type-is-node-modules-mime-types tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+1007 silly lockFile 225d0cbd-npm-mime-types-2-0-0-package-tgz tar:///Users/edwincaro/.npm/mime-types/2.0.0/package.tgz
+1008 silly lockFile 225d0cbd-npm-mime-types-2-0-0-package-tgz tar:///Users/edwincaro/.npm/mime-types/2.0.0/package.tgz
+1009 info preinstall mime-types@2.0.0
+1010 verbose readDependencies using package.json deps
+1011 verbose readDependencies using package.json deps
+1012 verbose cache add [ 'mime-db@~1.0.1', null ]
+1013 verbose cache add name=undefined spec="mime-db@~1.0.1" args=["mime-db@~1.0.1",null]
+1014 verbose parsed url { protocol: null,
+1014 verbose parsed url   slashes: null,
+1014 verbose parsed url   auth: null,
+1014 verbose parsed url   host: null,
+1014 verbose parsed url   port: null,
+1014 verbose parsed url   hostname: null,
+1014 verbose parsed url   hash: null,
+1014 verbose parsed url   search: null,
+1014 verbose parsed url   query: null,
+1014 verbose parsed url   pathname: 'mime-db@~1.0.1',
+1014 verbose parsed url   path: 'mime-db@~1.0.1',
+1014 verbose parsed url   href: 'mime-db@~1.0.1' }
+1015 verbose cache add name="mime-db" spec="~1.0.1" args=["mime-db","~1.0.1"]
+1016 verbose parsed url { protocol: null,
+1016 verbose parsed url   slashes: null,
+1016 verbose parsed url   auth: null,
+1016 verbose parsed url   host: null,
+1016 verbose parsed url   port: null,
+1016 verbose parsed url   hostname: null,
+1016 verbose parsed url   hash: null,
+1016 verbose parsed url   search: null,
+1016 verbose parsed url   query: null,
+1016 verbose parsed url   pathname: '~1.0.1',
+1016 verbose parsed url   path: '~1.0.1',
+1016 verbose parsed url   href: '~1.0.1' }
+1017 verbose addNamed [ 'mime-db', '~1.0.1' ]
+1018 verbose addNamed [ null, '>=1.0.1-0 <1.1.0-0' ]
+1019 silly lockFile a88d29a0-mime-db-1-0-1 mime-db@~1.0.1
+1020 verbose lock mime-db@~1.0.1 /Users/edwincaro/.npm/a88d29a0-mime-db-1-0-1.lock
+1021 silly addNameRange { name: 'mime-db', range: '>=1.0.1-0 <1.1.0-0', hasData: false }
+1022 verbose url raw mime-db
+1023 verbose url resolving [ 'https://registry.npmjs.org/', './mime-db' ]
+1024 verbose url resolved https://registry.npmjs.org/mime-db
+1025 info trying registry request attempt 1 at 11:03:00
+1026 verbose etag "73IZLLG2Z91FV21DGYWRRAQ2Q"
+1027 http GET https://registry.npmjs.org/mime-db
+1028 http 304 https://registry.npmjs.org/mime-db
+1029 silly registry.get cb [ 304,
+1029 silly registry.get   { date: 'Sun, 07 Sep 2014 15:56:29 GMT',
+1029 silly registry.get     server: 'Apache',
+1029 silly registry.get     via: '1.1 varnish',
+1029 silly registry.get     'last-modified': 'Sun, 07 Sep 2014 15:56:30 GMT',
+1029 silly registry.get     'cache-control': 'max-age=60',
+1029 silly registry.get     etag: '"73IZLLG2Z91FV21DGYWRRAQ2Q"',
+1029 silly registry.get     'x-served-by': 'cache-ord1726-ORD',
+1029 silly registry.get     'x-cache': 'MISS',
+1029 silly registry.get     'x-cache-hits': '0',
+1029 silly registry.get     'x-timer': 'S1410105389.878500,VS0,VE270',
+1029 silly registry.get     vary: 'Accept',
+1029 silly registry.get     'content-length': '0',
+1029 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1029 silly registry.get     connection: 'Keep-Alive' } ]
+1030 verbose etag mime-db from cache
+1031 silly addNameRange number 2 { name: 'mime-db', range: '>=1.0.1-0 <1.1.0-0', hasData: true }
+1032 silly addNameRange versions [ 'mime-db', [ '0.0.0', '1.0.0', '1.0.1' ] ]
+1033 verbose addNamed [ 'mime-db', '1.0.1' ]
+1034 verbose addNamed [ '1.0.1', '1.0.1' ]
+1035 silly lockFile fca97c13-mime-db-1-0-1 mime-db@1.0.1
+1036 verbose lock mime-db@1.0.1 /Users/edwincaro/.npm/fca97c13-mime-db-1-0-1.lock
+1037 silly lockFile fca97c13-mime-db-1-0-1 mime-db@1.0.1
+1038 silly lockFile fca97c13-mime-db-1-0-1 mime-db@1.0.1
+1039 silly lockFile a88d29a0-mime-db-1-0-1 mime-db@~1.0.1
+1040 silly lockFile a88d29a0-mime-db-1-0-1 mime-db@~1.0.1
+1041 silly resolved [ { name: 'mime-db',
+1041 silly resolved     description: 'Media Type Database',
+1041 silly resolved     version: '1.0.1',
+1041 silly resolved     author:
+1041 silly resolved      { name: 'Jonathan Ong',
+1041 silly resolved        email: 'me@jongleberry.com',
+1041 silly resolved        url: 'http://jongleberry.com' },
+1041 silly resolved     license: 'MIT',
+1041 silly resolved     repository: { type: 'git', url: 'https://github.com/jshttp/mime-db' },
+1041 silly resolved     devDependencies:
+1041 silly resolved      { co: '3',
+1041 silly resolved        cogent: '1',
+1041 silly resolved        'csv-parse': '0',
+1041 silly resolved        gnode: '0.0.8',
+1041 silly resolved        istanbul: '0.3.0',
+1041 silly resolved        mocha: '1',
+1041 silly resolved        'stream-to-array': '2' },
+1041 silly resolved     engine: { node: '>= 0.6.0' },
+1041 silly resolved     files: [ 'LICENSE', 'db.json', 'index.js' ],
+1041 silly resolved     scripts:
+1041 silly resolved      { update: 'gnode scripts/extensions && gnode scripts/types && node scripts/build',
+1041 silly resolved        clean: 'rm src/*',
+1041 silly resolved        test: 'mocha --reporter spec --bail --check-leaks test/',
+1041 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+1041 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+1041 silly resolved     keywords: [ 'mime', 'db', 'type', 'types', 'database', 'charset', 'charsets' ],
+1041 silly resolved     gitHead: '6c9ee137430015b52887901377ac2f33e21f4078',
+1041 silly resolved     bugs: { url: 'https://github.com/jshttp/mime-db/issues' },
+1041 silly resolved     homepage: 'https://github.com/jshttp/mime-db',
+1041 silly resolved     _id: 'mime-db@1.0.1',
+1041 silly resolved     _shasum: '35d99b0965967253bb30633a7d07a8de9975a952',
+1041 silly resolved     _from: 'mime-db@~1.0.1',
+1041 silly resolved     _npmVersion: '1.4.21',
+1041 silly resolved     _npmUser: { name: 'jongleberry', email: 'jonathanrichardong@gmail.com' },
+1041 silly resolved     maintainers: [ [Object] ],
+1041 silly resolved     dist:
+1041 silly resolved      { shasum: '35d99b0965967253bb30633a7d07a8de9975a952',
+1041 silly resolved        tarball: 'http://registry.npmjs.org/mime-db/-/mime-db-1.0.1.tgz' },
+1041 silly resolved     directories: {},
+1041 silly resolved     _resolved: 'https://registry.npmjs.org/mime-db/-/mime-db-1.0.1.tgz',
+1041 silly resolved     readme: 'ERROR: No README data found!' } ]
+1042 info install mime-db@1.0.1 into /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+1043 info installOne mime-db@1.0.1
+1044 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db unbuild
+1045 verbose tar unpack /Users/edwincaro/.npm/mime-db/1.0.1/package.tgz
+1046 silly lockFile 649a1bbf--mime-types-node-modules-mime-db tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1047 verbose lock tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db /Users/edwincaro/.npm/649a1bbf--mime-types-node-modules-mime-db.lock
+1048 silly lockFile ea607313-ro-npm-mime-db-1-0-1-package-tgz tar:///Users/edwincaro/.npm/mime-db/1.0.1/package.tgz
+1049 verbose lock tar:///Users/edwincaro/.npm/mime-db/1.0.1/package.tgz /Users/edwincaro/.npm/ea607313-ro-npm-mime-db-1-0-1-package-tgz.lock
+1050 silly gunzTarPerm modes [ '755', '644' ]
+1051 silly gunzTarPerm extractEntry package.json
+1052 silly gunzTarPerm extractEntry README.md
+1053 silly gunzTarPerm extractEntry LICENSE
+1054 silly gunzTarPerm extractEntry index.js
+1055 silly gunzTarPerm extractEntry db.json
+1056 silly lockFile 649a1bbf--mime-types-node-modules-mime-db tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1057 silly lockFile 649a1bbf--mime-types-node-modules-mime-db tar:///Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1058 silly lockFile ea607313-ro-npm-mime-db-1-0-1-package-tgz tar:///Users/edwincaro/.npm/mime-db/1.0.1/package.tgz
+1059 silly lockFile ea607313-ro-npm-mime-db-1-0-1-package-tgz tar:///Users/edwincaro/.npm/mime-db/1.0.1/package.tgz
+1060 info preinstall mime-db@1.0.1
+1061 verbose readDependencies using package.json deps
+1062 verbose readDependencies using package.json deps
+1063 silly resolved []
+1064 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1065 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db
+1066 verbose linkStuff [ false,
+1066 verbose linkStuff   false,
+1066 verbose linkStuff   false,
+1066 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules' ]
+1067 info linkStuff mime-db@1.0.1
+1068 verbose linkBins mime-db@1.0.1
+1069 verbose linkMans mime-db@1.0.1
+1070 verbose rebuildBundles mime-db@1.0.1
+1071 info install mime-db@1.0.1
+1072 info postinstall mime-db@1.0.1
+1073 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+1074 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules/mime-types
+1075 verbose linkStuff [ false,
+1075 verbose linkStuff   false,
+1075 verbose linkStuff   false,
+1075 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is/node_modules' ]
+1076 info linkStuff mime-types@2.0.0
+1077 verbose linkBins mime-types@2.0.0
+1078 verbose linkMans mime-types@2.0.0
+1079 verbose rebuildBundles mime-types@2.0.0
+1080 verbose rebuildBundles [ 'mime-db' ]
+1081 info install mime-types@2.0.0
+1082 info postinstall mime-types@2.0.0
+1083 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+1084 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules/type-is
+1085 verbose linkStuff [ false,
+1085 verbose linkStuff   false,
+1085 verbose linkStuff   false,
+1085 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser/node_modules' ]
+1086 info linkStuff type-is@1.5.0
+1087 verbose linkBins type-is@1.5.0
+1088 verbose linkMans type-is@1.5.0
+1089 verbose rebuildBundles type-is@1.5.0
+1090 verbose rebuildBundles [ 'mime-types' ]
+1091 info install type-is@1.5.0
+1092 info postinstall type-is@1.5.0
+1093 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+1094 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules/body-parser
+1095 verbose linkStuff [ false,
+1095 verbose linkStuff   false,
+1095 verbose linkStuff   false,
+1095 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/node_modules' ]
+1096 info linkStuff body-parser@1.8.0
+1097 verbose linkBins body-parser@1.8.0
+1098 verbose linkMans body-parser@1.8.0
+1099 verbose rebuildBundles body-parser@1.8.0
+1100 verbose rebuildBundles [ 'bytes',
+1100 verbose rebuildBundles   'depd',
+1100 verbose rebuildBundles   'iconv-lite',
+1100 verbose rebuildBundles   'media-typer',
+1100 verbose rebuildBundles   'on-finished',
+1100 verbose rebuildBundles   'raw-body',
+1100 verbose rebuildBundles   'type-is' ]
+1101 info install body-parser@1.8.0
+1102 info postinstall body-parser@1.8.0
+1103 verbose about to build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+1104 info build /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr
+1105 verbose linkStuff [ false,
+1105 verbose linkStuff   false,
+1105 verbose linkStuff   false,
+1105 verbose linkStuff   '/Users/edwincaro/Desktop/coffeescript/node_modules' ]
+1106 info linkStuff tiny-lr@0.1.3
+1107 verbose linkBins tiny-lr@0.1.3
+1108 verbose link bins [ { 'tiny-lr': './bin/tiny-lr' },
+1108 verbose link bins   '/Users/edwincaro/Desktop/coffeescript/node_modules/.bin',
+1108 verbose link bins   false ]
+1109 verbose linkMans tiny-lr@0.1.3
+1110 verbose rebuildBundles tiny-lr@0.1.3
+1111 verbose rebuildBundles [ 'body-parser', 'debug', 'faye-websocket', 'parseurl', 'qs' ]
+1112 info /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr unbuild
+1113 info preuninstall tiny-lr@0.1.3
+1114 info uninstall tiny-lr@0.1.3
+1115 verbose true,/Users/edwincaro/Desktop/coffeescript/node_modules,/Users/edwincaro/Desktop/coffeescript/node_modules unbuild tiny-lr@0.1.3
+1116 verbose /Users/edwincaro/Desktop/coffeescript/node_modules/.bin,[object Object] binRoot
+1117 info postuninstall tiny-lr@0.1.3
+1118 error Error: ENOENT, chmod '/Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/bin/tiny-lr'
+1119 error If you need help, you may report this *entire* log,
+1119 error including the npm and node versions, at:
+1119 error     <http://github.com/npm/npm/issues>
+1120 error System Darwin 11.4.2
+1121 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "tiny-lr"
+1122 error cwd /Users/edwincaro/Desktop/coffeescript
+1123 error node -v v0.10.29
+1124 error npm -v 1.4.14
+1125 error path /Users/edwincaro/Desktop/coffeescript/node_modules/tiny-lr/bin/tiny-lr
+1126 error code ENOENT
+1127 error errno 34
+1128 verbose exit [ 34, true ]
